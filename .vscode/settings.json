@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "ecat_master.h": "c",
+        "slave.h": "c",
+        "eeprom.h": "c",
+        "cmd_process.h": "c",
+        "stdio.h": "c",
+        "stddef.h": "c"
+    },
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc"
+}
