@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 
-#define SLAVE_CNT_ZCPC   2
+#define SLAVE_CNT_ZCPC   5
 #define SLAVE_CNT_ZIO_DO 3
 #define SLAVE_CNT_ZIO_DI 3
 #define SLAVE_CNT_ZIO_DD 3
@@ -62,6 +62,7 @@ typedef enum{
     CMD_ID_DATA_LOG_AO,
     CMD_ID_DATA_LOG_AI,
     CMD_ID_DATA_LOG_DD,
+    CMD_ID_DATA_LOG_PW,
     CMD_ID_ESI_UPDATE,
     CMD_ID_MAX_NUM,
 }cmd_id_t;

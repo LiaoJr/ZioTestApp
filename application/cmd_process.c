@@ -62,10 +62,12 @@ static void *cmd_process_handler(void *args)
 
         switch(zio_cmd_recv.cmd_type){
         case CMD_TYPE_EEPROM_RW:    /** EEPROM读写命令 */
+        case CMD_TYPE_ZMCIO_DO:  /* DO命令 */
+        case CMD_TYPE_ZMCIO_DI:  /* DI命令 */
+        case CMD_TYPE_DATA_LOG:  /* 数据记录命令 */
             if(zio_cmd_recv.cmd_id > CMD_ID_NONE && zio_cmd_recv.cmd_id < CMD_ID_MAX_NUM 
             && zio_cmd_recv.cmd_req_ack == CMD_REQ
-            && zio_cmd_mgr[zio_cmd_recv.cmd_id].pfn_cmd_process != NULL)
-            {
+            && zio_cmd_mgr[zio_cmd_recv.cmd_id].pfn_cmd_process != NULL){
                 /* 执行命令对应的回调函数 */
                 errno = zio_cmd_mgr[zio_cmd_recv.cmd_id].pfn_cmd_process((void *)&zio_cmd_recv.cmd_data);
                 /* 执行完毕，req_ack寄存器置0，并返回执行结果 */
@@ -75,42 +77,7 @@ static void *cmd_process_handler(void *args)
                 pthread_mutex_unlock(&mutex_of_mbreg);
             }
             break;
-
-        case CMD_TYPE_ZMCIO_DO:
-            if(zio_cmd_recv.cmd_id > CMD_ID_NONE && zio_cmd_recv.cmd_id < CMD_ID_MAX_NUM 
-            && zio_cmd_recv.cmd_req_ack == CMD_REQ
-            && zio_cmd_mgr[zio_cmd_recv.cmd_id].pfn_cmd_process != NULL)
-            {
-                /* 执行命令对应的回调函数 */
-                errno = zio_cmd_mgr[zio_cmd_recv.cmd_id].pfn_cmd_process((void *)&zio_cmd_recv.cmd_data);
-                /* 执行完毕，req_ack寄存器置0，并返回执行结果 */
-                pthread_mutex_lock(&mutex_of_mbreg);
-                mb_mapping->tab_registers[CMD_REQ_ACK_REG] = CMD_ACK;
-                mb_mapping->tab_registers[CMD_REQ_ACK_REG] |= errno << 8;
-                pthread_mutex_unlock(&mutex_of_mbreg);
-            }
-            break;
-
-        case CMD_TYPE_ZMCIO_DI:
-            break;
-
-        case CMD_TYPE_DATA_LOG:
-            if(zio_cmd_recv.cmd_id > CMD_ID_NONE && zio_cmd_recv.cmd_id < CMD_ID_MAX_NUM 
-            && zio_cmd_recv.cmd_req_ack == CMD_REQ
-            && zio_cmd_mgr[zio_cmd_recv.cmd_id].pfn_cmd_process != NULL)
-            {
-                /* 执行命令对应的回调函数 */
-                errno = zio_cmd_mgr[zio_cmd_recv.cmd_id].pfn_cmd_process((void *)&zio_cmd_recv.cmd_data);
-                /* 执行完毕，req_ack寄存器置0，并返回执行结果 */
-                pthread_mutex_lock(&mutex_of_mbreg);
-                mb_mapping->tab_registers[CMD_REQ_ACK_REG] = CMD_ACK;
-                mb_mapping->tab_registers[CMD_REQ_ACK_REG] |= errno << 8;
-                pthread_mutex_unlock(&mutex_of_mbreg);
-            }
-            break;
-
         default:
-            /** 其他无效或不支持命令， 不作处理 */
             break;
         }
 
@@ -132,6 +99,7 @@ int cmd_process_init(void)
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_EEPROM_RW, CMD_ID_EEPROM_READ, _read_eeprom);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_EEPROM_RW, CMD_ID_EEPROM_WRITE, _write_eeprom);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_EEPROM_RW, CMD_ID_EEPROM_ERASE, _erase_eeprom);
+
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_ZMCIO_DO, CMD_ID_ZMCIO_DO_LEVEL, app_zmcio_do_level);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_ZMCIO_DO, CMD_ID_ZMCIO_DO_PWM, app_zmcio_do_pwm);
 
@@ -141,6 +109,7 @@ int cmd_process_init(void)
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_DATA_LOG, CMD_ID_DATA_LOG_AO, data_log_ao);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_DATA_LOG, CMD_ID_DATA_LOG_AI, data_log_ai);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_DATA_LOG, CMD_ID_DATA_LOG_DD, data_log_dd);
+    cmd_process_register(zio_cmd_mgr, CMD_TYPE_DATA_LOG, CMD_ID_DATA_LOG_PW, data_log_pw);
 
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_EEPROM_RW, CMD_ID_ESI_UPDATE, _update_esi);
     

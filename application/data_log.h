@@ -12,6 +12,6 @@ uint8_t data_log_di(void *p_arg);
 uint8_t data_log_ao(void *p_arg);
 uint8_t data_log_ai(void *p_arg);
 uint8_t data_log_dd(void *p_arg);
-
+uint8_t data_log_pw(void *p_arg);
 
 #endif

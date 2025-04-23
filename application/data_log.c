@@ -24,6 +24,16 @@
 #define DATA_LOG_DIR          "data_log"
 
 
+const char csv_header_cp[] = 
+    "Product ID,"
+    "Serial No,"
+    "UID,"
+    "Result_CPs,"
+    "Result_Eeprom_CP,"
+    "Result_Ecat_CP,"
+    "Result_CP_Vol,"
+    "Result_LEDs_CP\r\n";
+
 const char csv_header_do[] = 
     "Product ID,"
     "Serial No,"
@@ -135,6 +145,11 @@ uint8_t data_log_cp(void *p_arg)
     printf("\tSerial No: %08X\n", eepromctx.serial_no);
     printf("\tUID: %ld\n", eepromctx.UID);
     printf("\tResult_CP: %d\n", mb_mapping->tab_registers[4]);
+    printf("\tResult_Eeprom_CP: %d\n", mb_mapping->tab_registers[5]);
+    printf("\tResult_Ecat_CP: %d\n", mb_mapping->tab_registers[6]);
+    printf("\tResult_CP_Vol: %d\n", mb_mapping->tab_registers[7]);
+    printf("\tResult_CP_Vol: %d\n", mb_mapping->tab_registers[8]);
+
     return ret;
 }
 
@@ -503,6 +518,19 @@ uint8_t data_log_ai(void *p_arg)
 uint8_t data_log_dd(void *p_arg)
 {
     uint8_t ret = 0;
+
+    return ret;
+}
+
+
+uint8_t data_log_pw(void *p_arg)
+{
+    uint8_t ret = 0;
+
+    printf("\n>>>>>>>>>>PW module data log processing...\n");
+    printf("\tResult_PW: %d\n", mb_mapping->tab_registers[4]);
+    printf("\tResult_Ecat_PW: %d\n", mb_mapping->tab_registers[5]);
+    printf("\tResult_PW_Vol: %d\n", mb_mapping->tab_registers[6]);
 
     return ret;
 }
