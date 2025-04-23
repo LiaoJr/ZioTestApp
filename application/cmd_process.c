@@ -99,6 +99,7 @@ int cmd_process_init(void)
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_EEPROM_RW, CMD_ID_EEPROM_READ, _read_eeprom);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_EEPROM_RW, CMD_ID_EEPROM_WRITE, _write_eeprom);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_EEPROM_RW, CMD_ID_EEPROM_ERASE, _erase_eeprom);
+    cmd_process_register(zio_cmd_mgr, CMD_TYPE_EEPROM_RW, CMD_ID_ESI_UPDATE, _update_esi);
 
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_ZMCIO_DO, CMD_ID_ZMCIO_DO_LEVEL, app_zmcio_do_level);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_ZMCIO_DO, CMD_ID_ZMCIO_DO_PWM, app_zmcio_do_pwm);
@@ -110,8 +111,6 @@ int cmd_process_init(void)
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_DATA_LOG, CMD_ID_DATA_LOG_AI, data_log_ai);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_DATA_LOG, CMD_ID_DATA_LOG_DD, data_log_dd);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_DATA_LOG, CMD_ID_DATA_LOG_PW, data_log_pw);
-
-    cmd_process_register(zio_cmd_mgr, CMD_TYPE_EEPROM_RW, CMD_ID_ESI_UPDATE, _update_esi);
     
     int err = pthread_create(&pid_cmd_process, NULL, cmd_process_handler, NULL);
     if (err != 0){

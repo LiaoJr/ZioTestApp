@@ -6,9 +6,9 @@
 
 
 #define SLAVE_CNT_ZCPC   5
-#define SLAVE_CNT_ZIO_DO 3
-#define SLAVE_CNT_ZIO_DI 3
-#define SLAVE_CNT_ZIO_DD 3
+#define SLAVE_CNT_ZIO_DO 4
+#define SLAVE_CNT_ZIO_DI 4
+#define SLAVE_CNT_ZIO_DD 4
 #define SLAVE_CNT_ZIO_AO 4
 #define SLAVE_CNT_ZIO_AI 4
 
