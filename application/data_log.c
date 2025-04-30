@@ -23,6 +23,8 @@
 
 #define DATA_LOG_DIR          "data_log"
 
+#define LOG_FILE_WRITE_EN     1
+
 
 const char csv_header_cp[] = 
     "Product ID,"
@@ -66,7 +68,8 @@ const char csv_header_ai[] =
     "Result_Ecat_AI,"
     "Result_AIs_Cal,"
     "Result_AIs_Test,"
-    "Result_LEDs_AI\r\n";
+    "Result_LEDs_AI,"
+    "Result_AI_Vol\r\n";
 
 const char csv_header_ao[] = 
     "Product ID,"
@@ -78,7 +81,8 @@ const char csv_header_ao[] =
     "Result_Ecat_AO,"
     "Result_AOs_Cal,"
     "Result_AOs_Test,"
-    "Result_LEDs_AO\r\n";
+    "Result_LEDs_AO,"
+    "Result_AO_Vol\r\n";
 
 
 extern modbus_mapping_t *mb_mapping;    /** modbus寄存器映射信息，请务必做好互斥访问 */
@@ -139,6 +143,15 @@ void data_log_init(void)
 uint8_t data_log_cp(void *p_arg)
 {
     uint8_t ret = 0;
+#if LOG_FILE_WRITE_EN
+    int fd;
+    char log_file_name[512] = {0};
+    char result_log[512] = {0};
+    char data_log[512] = {0};
+    char str_temp[256] = {0};
+    float cp_vol[11] = {0};
+    uint32_t *p_uint32;
+#endif
 
     printf("\n>>>>>>>>>>CP module data log processing...\n");
     printf("\tPID:%08x\n", eepromctx.product_id);
@@ -148,17 +161,81 @@ uint8_t data_log_cp(void *p_arg)
     printf("\tResult_Eeprom_CP: %d\n", mb_mapping->tab_registers[5]);
     printf("\tResult_Ecat_CP: %d\n", mb_mapping->tab_registers[6]);
     printf("\tResult_CP_Vol: %d\n", mb_mapping->tab_registers[7]);
-    printf("\tResult_CP_Vol: %d\n", mb_mapping->tab_registers[8]);
+    printf("\tResult_LEDs_CP: %d\n", mb_mapping->tab_registers[8]);
 
+#if LOG_FILE_WRITE_EN
+    switch(eepromctx.product_id){
+    case PID_ZCPC_80801:
+        sprintf(log_file_name, "./%s/ZCPC-80801_%ld.csv",
+                                DATA_LOG_DIR, 
+                                eepromctx.UID);
+        break;
+    case PID_ZCPC_80801_PIO:
+        sprintf(log_file_name, "./%s/ZCPC-80801-Pio_%ld.csv",
+                                DATA_LOG_DIR, 
+                                eepromctx.UID);
+        break;
+    default:
+        break;
+    }
+
+    /* 创建打开data log文件 */
+    fd = open(log_file_name, O_CREAT|O_RDWR|O_TRUNC, 0664);
+    if(fd < 0){
+        perror("creat data log file failed");
+        return 1;
+    }
+
+    write(fd, csv_header_cp, strlen(csv_header_cp));
+    sprintf(result_log, "%08X,%08X,%ld,%d,%d,%d,%d,%d\r\n",
+                        eepromctx.product_id,
+                        eepromctx.serial_no,
+                        eepromctx.UID,
+                        (int16_t)mb_mapping->tab_registers[4],
+                        (int16_t)mb_mapping->tab_registers[5],
+                        (int16_t)mb_mapping->tab_registers[6],
+                        (int16_t)mb_mapping->tab_registers[7],
+                        (int16_t)mb_mapping->tab_registers[8]);
+    write(fd, result_log, strlen(result_log));  /* 写入测试结果 */
+
+    /** 写入测试数据 */
+    memset(result_log, 0, sizeof(result_log));
+    write(fd, "\r\n", 2);
+    for(int i = 0, j = 10; i < sizeof(cp_vol)/sizeof(cp_vol[0]); i++){
+        p_uint32 = (uint32_t *)(cp_vol + i);
+        *p_uint32 = mb_mapping->tab_registers[j];
+        *p_uint32 |= ((uint32_t)mb_mapping->tab_registers[j+1]) << 16;
+        j += 2;
+
+        if(i % 8 == 0){
+            memset(str_temp, 0, sizeof(str_temp));
+            sprintf(str_temp,  "Data of test point %d\r\n", i / 8);
+            write(fd, str_temp, strlen(str_temp));
+        }
+        memset(data_log, 0, sizeof(data_log));
+        sprintf(data_log, "voltage of test point: %f", cp_vol[i]);
+        write(fd, data_log, strlen(data_log));
+    }
+
+    ret = close(fd);
+    if(ret < 0){
+        printf("\tData log file [%s] create failed.\n", log_file_name);
+        ret = 1;
+    }else{
+        printf("\tData log file [%s] create success.\n", log_file_name);
+    }
+#endif
     return ret;
 }
 
 uint8_t data_log_do(void *p_arg)
 {
     uint8_t ret = 0;
+#if LOG_FILE_WRITE_EN
     int fd;
     char log_file_name[512] = {0};
     char result_log[512] = {0};
+#endif
 
     printf("\n>>>>>>>>>>DO module data log processing...\n");
     printf("\tPID:%08x\n", eepromctx.product_id);
@@ -171,6 +248,7 @@ uint8_t data_log_do(void *p_arg)
     printf("\tResult_DOs_Carry: %d\n", (int16_t)mb_mapping->tab_registers[8]);
     printf("\tResult_LEDs_DO: %d\n", (int16_t)mb_mapping->tab_registers[9]);
 
+#if LOG_FILE_WRITE_EN
     switch(eepromctx.product_id){
     case PID_ZIOC_E0016DN:
         sprintf(log_file_name, "./%s/ZIOC-E0016DN_%ld.csv",
@@ -216,15 +294,18 @@ uint8_t data_log_do(void *p_arg)
     }else{
         printf("\tData log file [%s] create success.\n", log_file_name);
     }
+#endif
     return ret;
 }
 
 uint8_t data_log_di(void *p_arg)
 {
     uint8_t ret = 0;
+#if LOG_FILE_WRITE_EN
     int fd;
     char log_file_name[512] = {0};
     char result_log[512] = {0};
+#endif
 
     printf("\n>>>>>>>>>>DI module data log processing...\n");
     printf("\tPID:%08x\n", eepromctx.product_id);
@@ -237,6 +318,7 @@ uint8_t data_log_di(void *p_arg)
     printf("\tResult_DIs_4ms: %d\n", (int16_t)mb_mapping->tab_registers[8]);
     printf("\tResult_LEDs_DI: %d\n", (int16_t)mb_mapping->tab_registers[9]);
 
+#if LOG_FILE_WRITE_EN
     switch(eepromctx.product_id){
     case PID_ZIOC_E1600DN:
         sprintf(log_file_name, "./%s/ZIOC-E1600DN_%ld.csv",
@@ -282,12 +364,14 @@ uint8_t data_log_di(void *p_arg)
     }else{
         printf("\tData log file [%s] create success.\n", log_file_name);
     }
+#endif
     return ret;
 }
 
 uint8_t data_log_ao(void *p_arg)
 {
     uint8_t ret = 0;
+#if LOG_FILE_WRITE_EN
     int fd;
     char log_file_name[512] = {0};
     char result_log[512] = {0};
@@ -297,6 +381,7 @@ uint8_t data_log_ao(void *p_arg)
     float ao_set_val[40] = {0};
     float measure_error[40] = {0};
     uint32_t *p_uint32;
+#endif
 
     printf("\n>>>>>>>>>>AO module data log processing...\n");
     printf("\tPID:%08x\n", eepromctx.product_id);
@@ -309,7 +394,9 @@ uint8_t data_log_ao(void *p_arg)
     printf("\tResult_AOs_Cal: %d\n", (int16_t)mb_mapping->tab_registers[8]);
     printf("\tResult_AOs_Test: %d\n", (int16_t)mb_mapping->tab_registers[9]);
     printf("\tResult_LEDs_AO: %d\n", (int16_t)mb_mapping->tab_registers[10]);
+    printf("\tResult_AO_Vol: %d\n", (int16_t)mb_mapping->tab_registers[11]);
 
+#if LOG_FILE_WRITE_EN
     switch(eepromctx.product_id){
     case PID_ZIOC_E0008AU:
         sprintf(log_file_name, "./%s/ZIOC-E0008AU_%ld.csv", 
@@ -336,7 +423,7 @@ uint8_t data_log_ao(void *p_arg)
     }
 
     write(fd, csv_header_ao, strlen(csv_header_ao));
-    sprintf(result_log, "%08X,%08X,%ld,%d,%d,%d,%d,%d,%d,%d\r\n",
+    sprintf(result_log, "%08X,%08X,%ld,%d,%d,%d,%d,%d,%d,%d,%d\r\n",
                         eepromctx.product_id,
                         eepromctx.serial_no,
                         eepromctx.UID,
@@ -346,7 +433,8 @@ uint8_t data_log_ao(void *p_arg)
                         (int16_t)mb_mapping->tab_registers[7],
                         (int16_t)mb_mapping->tab_registers[8],
                         (int16_t)mb_mapping->tab_registers[9],
-                        (int16_t)mb_mapping->tab_registers[10]);
+                        (int16_t)mb_mapping->tab_registers[10],
+                        (int16_t)mb_mapping->tab_registers[11]);
     write(fd, result_log, strlen(result_log));  /* 写入测试结果 */
 
     /** 写入测试数据 */
@@ -393,12 +481,14 @@ uint8_t data_log_ao(void *p_arg)
     }else{
         printf("\tData log file [%s] create success.\n", log_file_name);
     }
+#endif
     return ret;
 }
 
 uint8_t data_log_ai(void *p_arg)
 {
     uint8_t ret = 0;
+#if LOG_FILE_WRITE_EN
     int fd;
     char log_file_name[512] = {0};
     char result_log[512] = {0};
@@ -408,6 +498,7 @@ uint8_t data_log_ai(void *p_arg)
     float ai_smp_val[40] = {0};
     float measure_error[40] = {0};
     uint32_t *p_uint32;
+#endif
 
     printf("\n>>>>>>>>>>AI module data log processing...\n");
     printf("\tPID:%08x\n", eepromctx.product_id);
@@ -420,10 +511,12 @@ uint8_t data_log_ai(void *p_arg)
     printf("\tResult_AIs_Cal: %d\n", (int16_t)mb_mapping->tab_registers[8]);
     printf("\tResult_AIs_Test: %d\n", (int16_t)mb_mapping->tab_registers[9]);
     printf("\tResult_LEDs_AI: %d\n", (int16_t)mb_mapping->tab_registers[10]);
+    printf("\tResult_AI_Vol: %d\n", (int16_t)mb_mapping->tab_registers[11]);
     //for(int i = 0; i < 240; i++){
     //    printf("%d\n", mb_mapping->tab_registers[i+12]);
     //}
 
+#if LOG_FILE_WRITE_EN
     switch(eepromctx.product_id){
     case PID_ZIOC_E0800AI:
         sprintf(log_file_name, "./%s/ZIOC-E0800AI_%ld.csv", 
@@ -455,7 +548,7 @@ uint8_t data_log_ai(void *p_arg)
     }
 
     write(fd, csv_header_ai, strlen(csv_header_ai));
-    sprintf(result_log, "%08X,%08X,%ld,%d,%d,%d,%d,%d,%d,%d\r\n",
+    sprintf(result_log, "%08X,%08X,%ld,%d,%d,%d,%d,%d,%d,%d,%d\r\n",
                         eepromctx.product_id,
                         eepromctx.serial_no,
                         eepromctx.UID,
@@ -465,7 +558,8 @@ uint8_t data_log_ai(void *p_arg)
                         (int16_t)mb_mapping->tab_registers[7],
                         (int16_t)mb_mapping->tab_registers[8],
                         (int16_t)mb_mapping->tab_registers[9],
-                        (int16_t)mb_mapping->tab_registers[10]);
+                        (int16_t)mb_mapping->tab_registers[10],
+                        (int16_t)mb_mapping->tab_registers[11]);
     write(fd, result_log, strlen(result_log));  /* 写入测试结果 */
 
     /** 写入测试数据 */
@@ -512,12 +606,21 @@ uint8_t data_log_ai(void *p_arg)
     }else{
         printf("\tData log file [%s] create success.\n", log_file_name);
     }
+#endif
     return ret;
 }
 
 uint8_t data_log_dd(void *p_arg)
 {
     uint8_t ret = 0;
+
+    printf("\n>>>>>>>>>>DD module data log processing...\n");
+    printf("\tPID:%08x\n", eepromctx.product_id);
+    printf("\tSerial No: %08X\n", eepromctx.serial_no);
+    printf("\tUID: %ld\n", eepromctx.UID);
+    printf("\tResult_DD: %d\n", mb_mapping->tab_registers[4]);
+    printf("\tResult_Eeprom_DD: %d\n", mb_mapping->tab_registers[5]);
+    printf("\tResult_Ecat_DD: %d\n", mb_mapping->tab_registers[6]);
 
     return ret;
 }
