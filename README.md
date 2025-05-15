@@ -1,3 +1,5 @@
+请将S90MasterOfZio放于/etc/init.d中用于应用自启动  
+
 PLC通过Modbus TCP连接ZMC600E，目前支持的命令格式：
 
 ## EEPROM读写命令[cmd_type=1]
