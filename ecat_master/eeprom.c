@@ -321,13 +321,6 @@ uint8_t _write_eeprom(void *p_arg)
             printf("\twrong EtherCAT slave count\n");
             return 2;
         }
-        ret_ecat = write_eeprom_from_file(ctx.Master, &eepromctx);
-        if (ret_ecat != ECAT_S_OK){
-            printf("\tWrite EEPROM failed, ret_ecat = %d\n", ret_ecat);
-            errno = 1;
-            return errno;
-        }
-
         printf("\n>>>>>>>>>>EEPROM write processing...\n"
                 "\tSlave count:%d, Slave position:%d, data file name: %s\n"
                 "\tPID: %08X, Serial No: %08X, UID: %ld\n", 
@@ -337,6 +330,13 @@ uint8_t _write_eeprom(void *p_arg)
                 eepromctx.product_id,
                 eepromctx.serial_no,
                 eepromctx.UID);
+
+        ret_ecat = write_eeprom_from_file(ctx.Master, &eepromctx);
+        if (ret_ecat != ECAT_S_OK){
+            printf("\tWrite EEPROM failed, ret_ecat = %d\n", ret_ecat);
+            errno = 1;
+            return errno;
+        }
         printf("\tWrite eeprom data file [%s] to EtherCAT slave success.\n", eepromctx.file_name);
     } while (0);
 
