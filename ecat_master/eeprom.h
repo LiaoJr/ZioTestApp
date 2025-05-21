@@ -16,10 +16,16 @@
 #define EEPROM_SIZE         (2048)
 #define ESI_FILENAME_LEN    (128)
 
-#define ESI_BIN_PATH            "./bin/"
+#define ESI_BIN_PATH            "./ESI/"
 
+// 添加字符串化辅助宏
+#define STRINGIFY(x)            #x
+#define CONCAT_PATH(a, b)       STRINGIFY(a##b)
+
+// 修改需要拼接路径的宏定义
 #define ESI_ZCPC_E80801         "ZCPC-E80801_ESI.bin"
 
+// 修改后续宏定义以保持统一格式
 #define ESI_ZIOC_E0800AI        "ZIOC-E0800AI_ESI.bin"
 #define ESI_ZIOC_E0800AU        "ZIOC-E0800AU_ESI.bin"
 #define ESI_ZIOC_E0800AU1       "ZIOC-E0800AU1_ESI.bin"

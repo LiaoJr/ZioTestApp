@@ -60,55 +60,55 @@ uint8_t set_esi_file_by_id(uint8_t esi_id_in)
     memset(eepromctx.file_name, 0, ESI_FILENAME_LEN);
     switch(esi_id_in){
     case CMD_DATA_ZCPC_E80801:
-        strcpy(eepromctx.file_name, ESI_ZCPC_E80801);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZCPC_E80801);
         break;
     case CMD_DATA_ZIOC_E0800AI:
-        strcat(eepromctx.file_name, ESI_ZIOC_E0800AI);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0800AI);
         break;
     case CMD_DATA_ZIOC_E0800AU:
-        strcat(eepromctx.file_name, ESI_ZIOC_E0800AU);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0800AU);
         break;
     case CMD_DATA_ZIOC_E0800AU1:
-        strcat(eepromctx.file_name, ESI_ZIOC_E0800AU1);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0800AU1);
         break;
     case CMD_DATA_ZIOC_E0008AU:
-        strcat(eepromctx.file_name, ESI_ZIOC_E0008AU);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0008AU);
         break;
     case CMD_DATA_ZIOC_E0016DN:
-        strcat(eepromctx.file_name, ESI_ZIOC_E0016DN);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0016DN);
         break;
     case CMD_DATA_ZIOC_E0016DP:
-        strcat(eepromctx.file_name, ESI_ZIOC_E0016DP);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0016DP);
         break;
     case CMD_DATA_ZIOC_E1600DN:
-        strcat(eepromctx.file_name, ESI_ZIOC_E1600DN);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E1600DN);
         break;
     case CMD_DATA_ZIOC_E1600DP:
-        strcat(eepromctx.file_name, ESI_ZIOC_E1600DP);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E1600DP);
         break;
     case CMD_DATA_ZIOD_E0808DN:
-        strcat(eepromctx.file_name, ESI_ZIOD_E0808DN);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOD_E0808DN);
         break;
     case CMD_DATA_ZIOD_E0808DP:
-        strcat(eepromctx.file_name, ESI_ZIOD_E0808DP);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOD_E0808DP);
         break;
     case CMD_DATA_ZCPC_E80801_PIO:
-        strcat(eepromctx.file_name, ESI_ZCPC_E80801_PIO);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZCPC_E80801_PIO);
         break;
     case CMD_DATA_ZIOC_E0016DP_PIO:
-        strcat(eepromctx.file_name, ESI_ZIOC_E0016DP_PIO);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0016DP_PIO);
         break;
     case CMD_DATA_ZIOC_E1600DP_PIO:
-        strcat(eepromctx.file_name, ESI_ZIOC_E1600DP_PIO);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E1600DP_PIO);
         break;
     case CMD_DATA_ZIOC_E0008AU_PIO:
-        strcat(eepromctx.file_name, ESI_ZIOC_E0008AU_PIO);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0008AU_PIO);
         break;
     case CMD_DATA_ZIOC_E0800AU1_PIO:
-        strcat(eepromctx.file_name, ESI_ZIOC_E0800AU1_PIO);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0800AU1_PIO);
         break;
     case CMD_DATA_ZIOC_E0008AU1:
-        strcat(eepromctx.file_name, ESI_ZIOC_E0008AU1);
+        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0008AU1);
         break;
     default:
         /** ESI文件不存在 */
