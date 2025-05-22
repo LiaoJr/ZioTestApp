@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <errno.h>
 #include <math.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -17,6 +18,9 @@
 
 
 #define LOG_TAG "EEPROM"
+
+#define MOUNT_POINT           "/mnt/udisk"
+#define ESI_FILE_DIR          "/mnt/udisk/MasterOfZio/ESI/"
 
 
 extern ECAT_SIMPLE_START_CONTEXT ctx;
@@ -55,60 +59,60 @@ eeprom_ctx_t eepromctx = {
 };
 
 
-uint8_t set_esi_file_by_id(uint8_t esi_id_in)
+uint8_t set_esi_file_by_id(uint8_t esi_id_in, char *file_name)
 {
     memset(eepromctx.file_name, 0, ESI_FILENAME_LEN);
     switch(esi_id_in){
     case CMD_DATA_ZCPC_E80801:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZCPC_E80801);
+        strcpy(file_name, ESI_ZCPC_E80801);
         break;
     case CMD_DATA_ZIOC_E0800AI:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0800AI);
+        strcpy(file_name, ESI_ZIOC_E0800AI);
         break;
     case CMD_DATA_ZIOC_E0800AU:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0800AU);
+        strcpy(file_name, ESI_ZIOC_E0800AU);
         break;
     case CMD_DATA_ZIOC_E0800AU1:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0800AU1);
+        strcpy(file_name, ESI_ZIOC_E0800AU1);
         break;
     case CMD_DATA_ZIOC_E0008AU:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0008AU);
+        strcpy(file_name, ESI_ZIOC_E0008AU);
         break;
     case CMD_DATA_ZIOC_E0016DN:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0016DN);
+        strcpy(file_name, ESI_ZIOC_E0016DN);
         break;
     case CMD_DATA_ZIOC_E0016DP:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0016DP);
+        strcpy(file_name, ESI_ZIOC_E0016DP);
         break;
     case CMD_DATA_ZIOC_E1600DN:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E1600DN);
+        strcpy(file_name, ESI_ZIOC_E1600DN);
         break;
     case CMD_DATA_ZIOC_E1600DP:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E1600DP);
+        strcpy(file_name, ESI_ZIOC_E1600DP);
         break;
     case CMD_DATA_ZIOD_E0808DN:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOD_E0808DN);
+        strcpy(file_name, ESI_ZIOD_E0808DN);
         break;
     case CMD_DATA_ZIOD_E0808DP:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOD_E0808DP);
+        strcpy(file_name, ESI_ZIOD_E0808DP);
         break;
     case CMD_DATA_ZCPC_E80801_PIO:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZCPC_E80801_PIO);
+        strcpy(file_name, ESI_ZCPC_E80801_PIO);
         break;
     case CMD_DATA_ZIOC_E0016DP_PIO:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0016DP_PIO);
+        strcpy(file_name, ESI_ZIOC_E0016DP_PIO);
         break;
     case CMD_DATA_ZIOC_E1600DP_PIO:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E1600DP_PIO);
+        strcpy(file_name, ESI_ZIOC_E1600DP_PIO);
         break;
     case CMD_DATA_ZIOC_E0008AU_PIO:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0008AU_PIO);
+        strcpy(file_name, ESI_ZIOC_E0008AU_PIO);
         break;
     case CMD_DATA_ZIOC_E0800AU1_PIO:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0800AU1_PIO);
+        strcpy(file_name, ESI_ZIOC_E0800AU1_PIO);
         break;
     case CMD_DATA_ZIOC_E0008AU1:
-        sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, ESI_ZIOC_E0008AU1);
+        strcpy(file_name, ESI_ZIOC_E0008AU1);
         break;
     default:
         /** ESI文件不存在 */
@@ -197,7 +201,7 @@ uint8_t get_esi_file_by_pid(uint32_t pid_in)
 */
 uint8_t _read_eeprom(void *p_arg)
 {
-    uint8_t errno = 0;
+    uint8_t ret_cmd = 0;
     uint8_t cmd_data_eeprom_size;
     uint8_t i;
     uint64_t temp;
@@ -224,8 +228,8 @@ uint8_t _read_eeprom(void *p_arg)
         ret_ecat = read_eeprom_to_file(ctx.Master, &eepromctx);
         if (ret_ecat != ECAT_S_OK){
             printf("\tRead EEPROM failed, ret_ecat = %d\n", ret_ecat);
-            errno = 2;
-            return errno;
+            ret_cmd = 2;
+            return ret_cmd;
         }
 
         temp = eepromctx.UID;
@@ -246,7 +250,7 @@ uint8_t _read_eeprom(void *p_arg)
         mb_mapping->tab_registers[8] = eepromctx.serial_no >> 16;
         mb_mapping->tab_registers[9] = eepromctx.serial_no & 0xFFFF;
         
-        errno = 0;
+        ret_cmd = 0;
         printf("\tSlave position:%d, data size:%d, data file: %s\n",
                 eepromctx.slave_start, 
                 eepromctx.file_size,
@@ -259,7 +263,7 @@ uint8_t _read_eeprom(void *p_arg)
                 eepromctx.file_name);
     } while (0);
 
-    return errno;
+    return ret_cmd;
 }
 
 /**
@@ -267,13 +271,14 @@ uint8_t _read_eeprom(void *p_arg)
 */
 uint8_t _write_eeprom(void *p_arg)
 {
-    uint8_t errno = 0;
+    uint8_t ret_cmd = 0;
     uint16_t date_rx[4];
     uint16_t slave_count;
     uint16_t year, month, day, hour, minute, sec, number;
     uint8_t esi_id;
     ECAT_RESULT ret_ecat;
     uint16_t eeprom_cmd_data = *((uint16_t *)p_arg);
+    char esi_file_name[64] = {0};
 
     if(mb_mapping->tab_registers[4] == 0 && mb_mapping->tab_registers[5] == 0 &&
     mb_mapping->tab_registers[6] == 0 && mb_mapping->tab_registers[7] == 0){
@@ -304,11 +309,12 @@ uint8_t _write_eeprom(void *p_arg)
     }
 
     esi_id = (eeprom_cmd_data & 0xFF00) >> 8;
-    errno = set_esi_file_by_id(esi_id);
-    if(errno != 0){
-        return errno;
+    ret_cmd = set_esi_file_by_id(esi_id, esi_file_name);
+    if(ret_cmd != 0){
+        return ret_cmd;
     }
 
+    sprintf(eepromctx.file_name, "%s%s", ESI_BIN_PATH, esi_file_name);
     eepromctx.file_size = 1024;
     eepromctx.serial_no = (mb_mapping->tab_registers[8] << 16) + mb_mapping->tab_registers[9];
 
@@ -334,13 +340,13 @@ uint8_t _write_eeprom(void *p_arg)
         ret_ecat = write_eeprom_from_file(ctx.Master, &eepromctx);
         if (ret_ecat != ECAT_S_OK){
             printf("\tWrite EEPROM failed, ret_ecat = %d\n", ret_ecat);
-            errno = 1;
-            return errno;
+            ret_cmd = 1;
+            return ret_cmd;
         }
         printf("\tWrite eeprom data file [%s] to EtherCAT slave success.\n", eepromctx.file_name);
     } while (0);
 
-    return errno;
+    return ret_cmd;
 }
 
 /**
@@ -359,7 +365,7 @@ uint8_t _write_eeprom(void *p_arg)
 */
 uint8_t _erase_eeprom(void *p_arg)
 {
-    uint8_t errno = 0;
+    uint8_t ret_cmd = 0;
     uint8_t cmd_data_eeprom_size;
     uint8_t i;
     ECAT_RESULT ret_ecat;
@@ -390,15 +396,15 @@ uint8_t _erase_eeprom(void *p_arg)
                                 eepromctx.file_size);
         if (ret_ecat != ECAT_S_OK){
             printf("\tWrite EEPROM failed, ret_ecat = %d\n", ret_ecat);
-            errno = 1;
-            return errno;
+            ret_cmd = 1;
+            return ret_cmd;
         }
 
-        errno = 0;
+        ret_cmd = 0;
         printf("\tErasing EEPROM of EtherCAT slave[%d] success.\n", eepromctx.slave_start);
     } while (0);
 
-    return errno;
+    return ret_cmd;
 }
 
 /**
@@ -406,12 +412,121 @@ uint8_t _erase_eeprom(void *p_arg)
  */
 uint8_t _update_esi(void *p_arg)
 {
-    uint8_t errno = 0;
-    uint8_t cmd_data_eeprom_size;
-    uint8_t i;
-    ECAT_RESULT ret_ecat;
-    uint16_t eeprom_cmd_data = *((uint16_t *)p_arg);
+    uint8_t ret_cmd = 0;
+    uint16_t cmd_data = *((uint16_t *)p_arg);
+    uint8_t esi_id;
+    char esi_file_name[64] = {0};
+    char update_esi_file_path[96] = {0};
+    char original_file_path[96] = {0};
+    char backup_file_path[100] = {0};
+    int sdx;
+    //ECAT_RESULT ret_ecat;
 
+    printf("\n>>>>>>>>>>ESI update processing...\n");
+
+    esi_id = (uint8_t)(cmd_data & 0xFF);
+    ret_cmd = set_esi_file_by_id(esi_id, esi_file_name);
+    sprintf(update_esi_file_path, "%s%s", ESI_FILE_DIR, esi_file_name);
+    sprintf(original_file_path, "%s%s", ESI_BIN_PATH, esi_file_name);
+    sprintf(backup_file_path, "%s.bak", original_file_path);
+    printf("\tESI file to update: %s\n", update_esi_file_path);
+    printf("\tOriginal ESI file: %s\n", original_file_path);
+    printf("\tBackup ESI file: %s\n", backup_file_path);
+
+    /* 1. 检查块设备是否存在（增加重试机制） */
+    int retry = 5;
+    while (retry-- > 0) {
+        if (access("/dev/sda", F_OK) == 0) {
+            sdx = 1;
+            printf("USB device /dev/sda found\n");
+            break;
+        }
+        if (access("/dev/sdb", F_OK) == 0) {
+            sdx = 2;
+            printf("USB device /dev/sdb found\n");
+            break;
+        }
+        if (access("/dev/sdc", F_OK) == 0) {
+            sdx = 3;
+            printf("USB device /dev/sdc found\n");
+            break;
+        }
+        if (access("/dev/sdd", F_OK) == 0) {
+            sdx = 4;
+            printf("USB device /dev/sdd found\n");
+            break;
+        }
+        sleep(1); // 等待设备识别
+    }
+    if (retry <= 0) {
+        printf("USB device not found\n");
+        return 1;
+    }
+
+    /* 2. 创建挂载目录 */
+    if (mkdir(MOUNT_POINT, 0755) && errno != EEXIST) {
+        perror("mkdir failed");
+        return 2;
+    }
+
+    /* 3. 挂载U盘（建议指定文件系统类型） */
+    switch(sdx){
+        case 1:
+            if (system("mount -t vfat /dev/sda1 " MOUNT_POINT) != 0) {
+                printf("Mount failed\n");
+                return 3;
+            }
+            break;
+        case 2:
+            if (system("mount -t vfat /dev/sdb1 " MOUNT_POINT) != 0) {
+                printf("Mount failed\n");
+                return 3;
+            }
+            break;
+        case 3:
+            if (system("mount -t vfat /dev/sdc1 " MOUNT_POINT) != 0) {
+                printf("Mount failed\n");
+                return 3;
+            }
+            break;
+        case 4:
+            if (system("mount -t vfat /dev/sdd1 " MOUNT_POINT) != 0) {
+                printf("Mount failed\n");
+                return 3;
+            }
+            break;
+    }
+
+    /* 4. 备份原ESI文件（增加存在性检查） */
+    struct stat st;
+    if (stat(original_file_path, &st) == 0) {
+        if (rename(original_file_path, backup_file_path) != 0) {
+            perror("Backup failed");
+            system("umount " MOUNT_POINT);
+            return 4;
+        }
+    }
+
+    /* 5. 拷贝新文件（使用dd保证二进制完整性） */
+    char cmd[256] = {0};
+    snprintf(cmd, sizeof(cmd), "dd if=%s of=%s bs=1M", 
+                update_esi_file_path, 
+                original_file_path);
+    if (system(cmd) != 0) {
+        printf("Copy failed\n");
+        rename(backup_file_path, original_file_path); // 恢复备份
+        system("umount " MOUNT_POINT);
+        return 5;
+    }
+
+    /* 6. 设置可执行权限 */
+    chmod(original_file_path, 0755);
+
+    /* 7. 卸载U盘 */
+    system("umount " MOUNT_POINT);
+    printf("\tESI file update success\n");
+
+#if 0
     cmd_data_eeprom_size = (eeprom_cmd_data & 0xFF00) >> 8;
     i = 0;
     do{
@@ -431,11 +546,11 @@ uint8_t _update_esi(void *p_arg)
         ret_ecat = read_eeprom_for_esi_update(ctx.Master, &eepromctx);
         if (ret_ecat != ECAT_S_OK){
             printf("\tRead EEPROM failed, ret_ecat = %d\n", ret_ecat);
-            errno = 2;
-            return errno;
+            ret = 2;
+            return ret;
         }
 
-        errno = 0;
+        ret = 0;
         printf("\tSlave position:%d, data size:%d,  PID: %08X\n",
                 eepromctx.slave_start, 
                 eepromctx.file_size,
@@ -444,8 +559,8 @@ uint8_t _update_esi(void *p_arg)
                 "\tESI file update success.\n", 
                 eepromctx.file_name);
     } while (0);
-
-    return errno;
+#endif
+    return ret_cmd;
 }
 
 

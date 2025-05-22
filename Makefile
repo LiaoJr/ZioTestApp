@@ -8,9 +8,10 @@ LIB_DIR		= $(ROOT_DIR)/lib
 INCLUDE_DIR = $(ROOT_DIR)/include
 APPLICATION_DIR = $(ROOT_DIR)/application
 ECAT_MASTER_DIR = $(ROOT_DIR)/ecat_master
+UPGRADE_DIR = $(ROOT_DIR)/upgrade
 UTILS_DIR   = $(ROOT_DIR)/utils
 # LIBMODBUS_DIR = $(ROOT_DIR)/libmodbus
-INC_DIR = $(INCLUDE_DIR) $(APPLICATION_DIR) $(ECAT_MASTER_DIR) $(UTILS_DIR)
+INC_DIR = $(INCLUDE_DIR) $(APPLICATION_DIR) $(ECAT_MASTER_DIR) $(UPGRADE_DIR) $(UTILS_DIR)
 
 CFLAGS = $(patsubst %, -I %, $(INC_DIR))
 CFLAGS+=-Wall -ggdb -O0 -pipe
@@ -27,6 +28,7 @@ CSRCS= \
 	ecat_master/ecat_master.c \
 	ecat_master/eeprom.c \
 	ecat_master/slave.c \
+	upgrade/app_upgrade.c \
 	utils/log.c \
 	utils/ticks.c \
 

@@ -9,6 +9,7 @@
 #include "eeprom.h"
 #include "app_zmcio.h"
 #include "data_log.h"
+#include "app_upgrade.h"
 
 
 extern pthread_mutex_t mutex_of_mbreg;
@@ -65,6 +66,7 @@ static void *cmd_process_handler(void *args)
         case CMD_TYPE_ZMCIO_DO:  /* DO命令 */
         case CMD_TYPE_ZMCIO_DI:  /* DI命令 */
         case CMD_TYPE_DATA_LOG:  /* 数据记录命令 */
+        case CMD_TYPE_APP_UPG:  /* 应用升级命令 */
             if(zio_cmd_recv.cmd_id > CMD_ID_NONE && zio_cmd_recv.cmd_id < CMD_ID_MAX_NUM 
             && zio_cmd_recv.cmd_req_ack == CMD_REQ
             && zio_cmd_mgr[zio_cmd_recv.cmd_id].pfn_cmd_process != NULL){
@@ -111,6 +113,8 @@ int cmd_process_init(void)
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_DATA_LOG, CMD_ID_DATA_LOG_AI, data_log_ai);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_DATA_LOG, CMD_ID_DATA_LOG_DD, data_log_dd);
     cmd_process_register(zio_cmd_mgr, CMD_TYPE_DATA_LOG, CMD_ID_DATA_LOG_PW, data_log_pw);
+
+    cmd_process_register(zio_cmd_mgr, CMD_TYPE_APP_UPG, CMD_ID_APP_UPG, app_upgrade_process);
     
     int err = pthread_create(&pid_cmd_process, NULL, cmd_process_handler, NULL);
     if (err != 0){

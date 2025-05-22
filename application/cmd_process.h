@@ -46,6 +46,7 @@ typedef enum{
     CMD_TYPE_ZMCIO_DO,
     CMD_TYPE_ZMCIO_DI,
     CMD_TYPE_DATA_LOG,
+    CMD_TYPE_APP_UPG,
     CMD_TYPE_END,
 }cmd_type_t;
 
@@ -64,6 +65,7 @@ typedef enum{
     CMD_ID_DATA_LOG_DD,
     CMD_ID_DATA_LOG_PW,
     CMD_ID_ESI_UPDATE,
+    CMD_ID_APP_UPG,
     CMD_ID_MAX_NUM,
 }cmd_id_t;
 

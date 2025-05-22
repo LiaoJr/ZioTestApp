@@ -6,11 +6,12 @@
                 "${default}",
                 "${workspaceFolder}/include",
                 "${workspaceFolder}/ecat_master",
-                "${workspaceFolder}/include/ecat",
+                "${workspaceFolder}/upgrade",
                 "${workspaceFolder}/include/modbus",
                 "${workspaceFolder}/utils",
                 "${workspaceFolder}/application",
-                "/usr/include/x86_64-linux-gnu"
+                "/usr/include/x86_64-linux-gnu",
+                "${workspaceFolder}/upgrade"
             ],
             "defines": [
                 "_DEBUG",
