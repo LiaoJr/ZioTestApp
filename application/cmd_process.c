@@ -94,6 +94,14 @@ static void *cmd_process_handler(void *args)
 */
 int cmd_process_init(void)
 {
+    FILE *log_file;
+    char cmd_str[512] = {0};
+
+    log_file = fopen("./cmd.log", "w");
+    strcpy(cmd_str, "EtherCAT Test box application start. [version:1.0.0]\n");
+    fwrite(cmd_str, sizeof(char), strlen(cmd_str), log_file);
+    fclose(log_file);
+
     memset(&zio_cmd_recv, 0, sizeof(cmd_receive_t));
     memset(&zio_cmd_mgr, 0, sizeof(cmd_manager_t)*CMD_ID_MAX_NUM);
 

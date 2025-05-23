@@ -526,40 +526,6 @@ uint8_t _update_esi(void *p_arg)
     system("umount " MOUNT_POINT);
     printf("\tESI file update success\n");
 
-#if 0
-    cmd_data_eeprom_size = (eeprom_cmd_data & 0xFF00) >> 8;
-    i = 0;
-    do{
-        if(cmd_data_eeprom_size & 0x1){
-            eepromctx.file_size = pow(2, i+8);
-        }
-        cmd_data_eeprom_size >>= 1;
-        i++;
-    }while(cmd_data_eeprom_size);
-
-    eepromctx.slave_count = 1;  /* 一次只能读一个从站 */
-    eepromctx.slave_start = eeprom_cmd_data & 0xFF;  /* 从站地址 */
-    eepromctx.eeprom_addr = 0;
-
-    do{
-        printf("\n>>>>>>>>>>ESI update processing...\n");
-        ret_ecat = read_eeprom_for_esi_update(ctx.Master, &eepromctx);
-        if (ret_ecat != ECAT_S_OK){
-            printf("\tRead EEPROM failed, ret_ecat = %d\n", ret_ecat);
-            ret = 2;
-            return ret;
-        }
-
-        ret = 0;
-        printf("\tSlave position:%d, data size:%d,  PID: %08X\n",
-                eepromctx.slave_start, 
-                eepromctx.file_size,
-                eepromctx.product_id);
-        printf("\tESI data file name: %s\n"
-                "\tESI file update success.\n", 
-                eepromctx.file_name);
-    } while (0);
-#endif
     return ret_cmd;
 }
 
