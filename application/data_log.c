@@ -149,7 +149,7 @@ uint8_t data_log_cp(void *p_arg)
     char result_log[512] = {0};
     char data_log[512] = {0};
     char str_temp[256] = {0};
-    float cp_vol[11] = {0};
+    float cp_vol_3d3;
     uint32_t *p_uint32;
 #endif
 
@@ -201,21 +201,32 @@ uint8_t data_log_cp(void *p_arg)
     /** 写入测试数据 */
     memset(result_log, 0, sizeof(result_log));
     write(fd, "\r\n", 2);
-    for(int i = 0, j = 10; i < sizeof(cp_vol)/sizeof(cp_vol[0]); i++){
-        p_uint32 = (uint32_t *)(cp_vol + i);
-        *p_uint32 = mb_mapping->tab_registers[j];
-        *p_uint32 |= ((uint32_t)mb_mapping->tab_registers[j+1]) << 16;
-        j += 2;
 
-        if(i % 8 == 0){
-            memset(str_temp, 0, sizeof(str_temp));
-            sprintf(str_temp,  "Data of test point %d\r\n", i / 8);
-            write(fd, str_temp, strlen(str_temp));
-        }
-        memset(data_log, 0, sizeof(data_log));
-        sprintf(data_log, "voltage of test point: %f", cp_vol[i]);
-        write(fd, data_log, strlen(data_log));
-    }
+    p_uint32 = (uint32_t *)&cp_vol_3d3;
+    *p_uint32 = mb_mapping->tab_registers[10];
+    *p_uint32 |= ((uint32_t)mb_mapping->tab_registers[11]) << 16;
+    memset(str_temp, 0, sizeof(str_temp));
+    sprintf(str_temp, "coupler 3.3V test point voltage:\r\n");
+    write(fd, str_temp, strlen(str_temp));
+
+    memset(data_log, 0, sizeof(data_log));
+    sprintf(data_log, "%fV\r\n", cp_vol_3d3);
+    write(fd, data_log, strlen(data_log));
+
+    // for(int i = 0, j = 10; i < sizeof(cp_vol)/sizeof(cp_vol[0]); i++){
+    //     p_uint32 = (uint32_t *)(cp_vol + i);
+    //     *p_uint32 = mb_mapping->tab_registers[j];
+    //     *p_uint32 |= ((uint32_t)mb_mapping->tab_registers[j+1]) << 16;
+    //     j += 2;
+
+    //     memset(str_temp, 0, sizeof(str_temp));
+    //     sprintf(str_temp,  "Data of test point %d\r\n", i);
+    //     write(fd, str_temp, strlen(str_temp));
+
+    //     memset(data_log, 0, sizeof(data_log));
+    //     sprintf(data_log, "voltage of test point: %f\r\n", cp_vol[i]);
+    //     write(fd, data_log, strlen(data_log));
+    // }
 
     ret = close(fd);
     if(ret < 0){

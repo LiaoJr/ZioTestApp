@@ -271,6 +271,7 @@ uint8_t _read_eeprom(void *p_arg)
 */
 uint8_t _write_eeprom(void *p_arg)
 {
+    eeprom_ctx_t eepromctx_check = {0};
     uint8_t ret_cmd = 0;
     uint16_t date_rx[4];
     uint16_t slave_count;
@@ -327,6 +328,26 @@ uint8_t _write_eeprom(void *p_arg)
             printf("\twrong EtherCAT slave count\n");
             return 2;
         }
+
+        eepromctx_check.eeprom_addr = 0;
+        eepromctx_check.file_name = NULL;
+        eepromctx_check.file_size = 1024;
+        eepromctx_check.slave_count = 1;
+        eepromctx_check.slave_start = 1;
+        ret_ecat = slave_mapping_check(ctx.Master, &eepromctx_check);
+        if(esi_id == CMD_DATA_ZCPC_E80801 || 
+        esi_id == CMD_DATA_ZCPC_E80801_PIO){
+            if(eepromctx_check.product_id != PID_ZIOC_E0008AU){
+                printf("\twrong EtherCAT slave mapping\n");
+                return 3;
+            }
+        }else{
+            if(eepromctx_check.product_id != PID_ZCPC_80801){
+                printf("\twrong EtherCAT slave mapping\n");
+                return 3;
+            }
+        }
+
         printf("\n>>>>>>>>>>EEPROM write processing...\n"
                 "\tSlave count:%d, Slave position:%d, data file name: %s\n"
                 "\tPID: %08X, Serial No: %08X, UID: %ld\n", 

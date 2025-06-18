@@ -178,3 +178,27 @@ ECAT_RESULT read_eeprom_for_esi_update(ECAT_HANDLE hMaster, eeprom_ctx_t *eeprom
     }
     return ret;
 }
+
+ECAT_RESULT slave_mapping_check(ECAT_HANDLE hMaster, eeprom_ctx_t *eepromctx_in)
+{
+    ECAT_RESULT ret = ECAT_E_FAIL;
+    ECAT_BYTE *pbuf = NULL;
+
+    do{
+        ret = read_eeprom(hMaster, 
+                            eepromctx_in->slave_count, 
+                            eepromctx_in->slave_start, 
+                            eepromctx_in->eeprom_addr, 
+                            eepromctx_in->file_size, &pbuf);
+        if (ret != ECAT_S_OK){
+            break;
+        }
+        eepromctx_in->UID = *(uint64_t *)(pbuf + eepromctx_in->file_size - 8);
+        eepromctx_in->serial_no = *(uint32_t *)(pbuf + 0x1C);
+        eepromctx_in->product_id = *(uint32_t *)(pbuf + 0x14);
+
+    } while (0);
+
+    ret = ECAT_S_OK;
+    return ret;
+}

@@ -32,5 +32,6 @@ ECAT_RESULT write_eeprom_from_file(ECAT_HANDLE hMaster, eeprom_ctx_t *eepromctx_
 
 ECAT_RESULT read_eeprom_for_esi_update(ECAT_HANDLE hMaster, eeprom_ctx_t *eepromctx_in);
 
+ECAT_RESULT slave_mapping_check(ECAT_HANDLE hMaster, eeprom_ctx_t *eepromctx_in);
 
 #endif // _SLAVE_H
