@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ljw-zlg/work/mqttproto_V2.0.3.240626
+CMAKE_SOURCE_DIR = /home/aworks/private/ZioTestApp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ljw-zlg/work/mqttproto_V2.0.3.240626
+CMAKE_BINARY_DIR = /home/aworks/private/ZioTestApp
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(CMAKE_COMMAND) -E cmake_progress_start /home/ljw-zlg/work/mqttproto_V2.0.3.240626/CMakeFiles /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/CMakeFiles/progress.marks
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ljw-zlg/work/mqttproto_V2.0.3.240626/CMakeFiles 0
+	cd /home/aworks/private/ZioTestApp && $(CMAKE_COMMAND) -E cmake_progress_start /home/aworks/private/ZioTestApp/CMakeFiles /home/aworks/private/ZioTestApp/demos/src/CMakeFiles/progress.marks
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aworks/private/ZioTestApp/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/clean
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/preinstall
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/preinstall
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/aworks/private/ZioTestApp && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 demos/src/CMakeFiles/http_transfer_chunk.dir/rule:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/http_transfer_chunk.dir/rule
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/http_transfer_chunk.dir/rule
 .PHONY : demos/src/CMakeFiles/http_transfer_chunk.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ http_transfer_chunk: demos/src/CMakeFiles/http_transfer_chunk.dir/rule
 
 # fast build rule for target.
 http_transfer_chunk/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/build
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/build
 .PHONY : http_transfer_chunk/fast
 
 # Convenience name for target.
 demos/src/CMakeFiles/download_package_example.dir/rule:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/download_package_example.dir/rule
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/download_package_example.dir/rule
 .PHONY : demos/src/CMakeFiles/download_package_example.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ download_package_example: demos/src/CMakeFiles/download_package_example.dir/rule
 
 # fast build rule for target.
 download_package_example/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/build
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/build
 .PHONY : download_package_example/fast
 
 # Convenience name for target.
 demos/src/CMakeFiles/test.dir/rule:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/test.dir/rule
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/test.dir/rule
 .PHONY : demos/src/CMakeFiles/test.dir/rule
 
 # Convenience name for target.
@@ -152,12 +152,12 @@ test: demos/src/CMakeFiles/test.dir/rule
 
 # fast build rule for target.
 test/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/build
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/build
 .PHONY : test/fast
 
 # Convenience name for target.
 demos/src/CMakeFiles/download_firmware_example.dir/rule:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/download_firmware_example.dir/rule
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/download_firmware_example.dir/rule
 .PHONY : demos/src/CMakeFiles/download_firmware_example.dir/rule
 
 # Convenience name for target.
@@ -167,12 +167,12 @@ download_firmware_example: demos/src/CMakeFiles/download_firmware_example.dir/ru
 
 # fast build rule for target.
 download_firmware_example/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/build
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/build
 .PHONY : download_firmware_example/fast
 
 # Convenience name for target.
 demos/src/CMakeFiles/device_example_Industry_ES.dir/rule:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/device_example_Industry_ES.dir/rule
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/device_example_Industry_ES.dir/rule
 .PHONY : demos/src/CMakeFiles/device_example_Industry_ES.dir/rule
 
 # Convenience name for target.
@@ -182,12 +182,12 @@ device_example_Industry_ES: demos/src/CMakeFiles/device_example_Industry_ES.dir/
 
 # fast build rule for target.
 device_example_Industry_ES/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/build
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/build
 .PHONY : device_example_Industry_ES/fast
 
 # Convenience name for target.
 demos/src/CMakeFiles/appuser_example.dir/rule:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/appuser_example.dir/rule
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/appuser_example.dir/rule
 .PHONY : demos/src/CMakeFiles/appuser_example.dir/rule
 
 # Convenience name for target.
@@ -197,12 +197,12 @@ appuser_example: demos/src/CMakeFiles/appuser_example.dir/rule
 
 # fast build rule for target.
 appuser_example/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/build
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/build
 .PHONY : appuser_example/fast
 
 # Convenience name for target.
 demos/src/CMakeFiles/upload_file_example.dir/rule:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/upload_file_example.dir/rule
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/upload_file_example.dir/rule
 .PHONY : demos/src/CMakeFiles/upload_file_example.dir/rule
 
 # Convenience name for target.
@@ -212,12 +212,12 @@ upload_file_example: demos/src/CMakeFiles/upload_file_example.dir/rule
 
 # fast build rule for target.
 upload_file_example/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/build
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/build
 .PHONY : upload_file_example/fast
 
 # Convenience name for target.
 demos/src/CMakeFiles/device_example_Home_ES.dir/rule:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/device_example_Home_ES.dir/rule
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/device_example_Home_ES.dir/rule
 .PHONY : demos/src/CMakeFiles/device_example_Home_ES.dir/rule
 
 # Convenience name for target.
@@ -227,12 +227,12 @@ device_example_Home_ES: demos/src/CMakeFiles/device_example_Home_ES.dir/rule
 
 # fast build rule for target.
 device_example_Home_ES/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/build
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/build
 .PHONY : device_example_Home_ES/fast
 
 # Convenience name for target.
 demos/src/CMakeFiles/gateway_example.dir/rule:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/gateway_example.dir/rule
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/gateway_example.dir/rule
 .PHONY : demos/src/CMakeFiles/gateway_example.dir/rule
 
 # Convenience name for target.
@@ -242,12 +242,12 @@ gateway_example: demos/src/CMakeFiles/gateway_example.dir/rule
 
 # fast build rule for target.
 gateway_example/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/build
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/build
 .PHONY : gateway_example/fast
 
 # Convenience name for target.
 demos/src/CMakeFiles/device_example.dir/rule:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/device_example.dir/rule
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f CMakeFiles/Makefile2 demos/src/CMakeFiles/device_example.dir/rule
 .PHONY : demos/src/CMakeFiles/device_example.dir/rule
 
 # Convenience name for target.
@@ -257,7 +257,7 @@ device_example: demos/src/CMakeFiles/device_example.dir/rule
 
 # fast build rule for target.
 device_example/fast:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/build
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/build
 .PHONY : device_example/fast
 
 Home_ES/device_Home_ES.o: Home_ES/device_Home_ES.c.o
@@ -266,7 +266,7 @@ Home_ES/device_Home_ES.o: Home_ES/device_Home_ES.c.o
 
 # target to build an object file
 Home_ES/device_Home_ES.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.o
 .PHONY : Home_ES/device_Home_ES.c.o
 
 Home_ES/device_Home_ES.i: Home_ES/device_Home_ES.c.i
@@ -275,7 +275,7 @@ Home_ES/device_Home_ES.i: Home_ES/device_Home_ES.c.i
 
 # target to preprocess a source file
 Home_ES/device_Home_ES.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.i
 .PHONY : Home_ES/device_Home_ES.c.i
 
 Home_ES/device_Home_ES.s: Home_ES/device_Home_ES.c.s
@@ -284,7 +284,7 @@ Home_ES/device_Home_ES.s: Home_ES/device_Home_ES.c.s
 
 # target to generate assembly for a file
 Home_ES/device_Home_ES.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.s
 .PHONY : Home_ES/device_Home_ES.c.s
 
 Home_ES/device_expl_Home_ES.o: Home_ES/device_expl_Home_ES.c.o
@@ -293,7 +293,7 @@ Home_ES/device_expl_Home_ES.o: Home_ES/device_expl_Home_ES.c.o
 
 # target to build an object file
 Home_ES/device_expl_Home_ES.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.o
 .PHONY : Home_ES/device_expl_Home_ES.c.o
 
 Home_ES/device_expl_Home_ES.i: Home_ES/device_expl_Home_ES.c.i
@@ -302,7 +302,7 @@ Home_ES/device_expl_Home_ES.i: Home_ES/device_expl_Home_ES.c.i
 
 # target to preprocess a source file
 Home_ES/device_expl_Home_ES.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.i
 .PHONY : Home_ES/device_expl_Home_ES.c.i
 
 Home_ES/device_expl_Home_ES.s: Home_ES/device_expl_Home_ES.c.s
@@ -311,7 +311,7 @@ Home_ES/device_expl_Home_ES.s: Home_ES/device_expl_Home_ES.c.s
 
 # target to generate assembly for a file
 Home_ES/device_expl_Home_ES.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.s
 .PHONY : Home_ES/device_expl_Home_ES.c.s
 
 Industry_ES/commands_Industry_ES.o: Industry_ES/commands_Industry_ES.c.o
@@ -320,7 +320,7 @@ Industry_ES/commands_Industry_ES.o: Industry_ES/commands_Industry_ES.c.o
 
 # target to build an object file
 Industry_ES/commands_Industry_ES.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/commands_Industry_ES.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/commands_Industry_ES.c.o
 .PHONY : Industry_ES/commands_Industry_ES.c.o
 
 Industry_ES/commands_Industry_ES.i: Industry_ES/commands_Industry_ES.c.i
@@ -329,7 +329,7 @@ Industry_ES/commands_Industry_ES.i: Industry_ES/commands_Industry_ES.c.i
 
 # target to preprocess a source file
 Industry_ES/commands_Industry_ES.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/commands_Industry_ES.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/commands_Industry_ES.c.i
 .PHONY : Industry_ES/commands_Industry_ES.c.i
 
 Industry_ES/commands_Industry_ES.s: Industry_ES/commands_Industry_ES.c.s
@@ -338,7 +338,7 @@ Industry_ES/commands_Industry_ES.s: Industry_ES/commands_Industry_ES.c.s
 
 # target to generate assembly for a file
 Industry_ES/commands_Industry_ES.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/commands_Industry_ES.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/commands_Industry_ES.c.s
 .PHONY : Industry_ES/commands_Industry_ES.c.s
 
 Industry_ES/device_Industry_ES.o: Industry_ES/device_Industry_ES.c.o
@@ -347,7 +347,7 @@ Industry_ES/device_Industry_ES.o: Industry_ES/device_Industry_ES.c.o
 
 # target to build an object file
 Industry_ES/device_Industry_ES.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_Industry_ES.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_Industry_ES.c.o
 .PHONY : Industry_ES/device_Industry_ES.c.o
 
 Industry_ES/device_Industry_ES.i: Industry_ES/device_Industry_ES.c.i
@@ -356,7 +356,7 @@ Industry_ES/device_Industry_ES.i: Industry_ES/device_Industry_ES.c.i
 
 # target to preprocess a source file
 Industry_ES/device_Industry_ES.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_Industry_ES.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_Industry_ES.c.i
 .PHONY : Industry_ES/device_Industry_ES.c.i
 
 Industry_ES/device_Industry_ES.s: Industry_ES/device_Industry_ES.c.s
@@ -365,7 +365,7 @@ Industry_ES/device_Industry_ES.s: Industry_ES/device_Industry_ES.c.s
 
 # target to generate assembly for a file
 Industry_ES/device_Industry_ES.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_Industry_ES.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_Industry_ES.c.s
 .PHONY : Industry_ES/device_Industry_ES.c.s
 
 Industry_ES/device_expl_Industry_ES.o: Industry_ES/device_expl_Industry_ES.c.o
@@ -374,7 +374,7 @@ Industry_ES/device_expl_Industry_ES.o: Industry_ES/device_expl_Industry_ES.c.o
 
 # target to build an object file
 Industry_ES/device_expl_Industry_ES.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_expl_Industry_ES.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_expl_Industry_ES.c.o
 .PHONY : Industry_ES/device_expl_Industry_ES.c.o
 
 Industry_ES/device_expl_Industry_ES.i: Industry_ES/device_expl_Industry_ES.c.i
@@ -383,7 +383,7 @@ Industry_ES/device_expl_Industry_ES.i: Industry_ES/device_expl_Industry_ES.c.i
 
 # target to preprocess a source file
 Industry_ES/device_expl_Industry_ES.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_expl_Industry_ES.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_expl_Industry_ES.c.i
 .PHONY : Industry_ES/device_expl_Industry_ES.c.i
 
 Industry_ES/device_expl_Industry_ES.s: Industry_ES/device_expl_Industry_ES.c.s
@@ -392,7 +392,7 @@ Industry_ES/device_expl_Industry_ES.s: Industry_ES/device_expl_Industry_ES.c.s
 
 # target to generate assembly for a file
 Industry_ES/device_expl_Industry_ES.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_expl_Industry_ES.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/Industry_ES/device_expl_Industry_ES.c.s
 .PHONY : Industry_ES/device_expl_Industry_ES.c.s
 
 appuser_expl.o: appuser_expl.c.o
@@ -401,7 +401,7 @@ appuser_expl.o: appuser_expl.c.o
 
 # target to build an object file
 appuser_expl.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/appuser_expl.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/appuser_expl.c.o
 .PHONY : appuser_expl.c.o
 
 appuser_expl.i: appuser_expl.c.i
@@ -410,7 +410,7 @@ appuser_expl.i: appuser_expl.c.i
 
 # target to preprocess a source file
 appuser_expl.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/appuser_expl.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/appuser_expl.c.i
 .PHONY : appuser_expl.c.i
 
 appuser_expl.s: appuser_expl.c.s
@@ -419,7 +419,7 @@ appuser_expl.s: appuser_expl.c.s
 
 # target to generate assembly for a file
 appuser_expl.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/appuser_expl.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/appuser_expl.c.s
 .PHONY : appuser_expl.c.s
 
 commands.o: commands.c.o
@@ -428,15 +428,15 @@ commands.o: commands.c.o
 
 # target to build an object file
 commands.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/commands.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/commands.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/commands.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/commands.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/commands.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/commands.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/commands.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/commands.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/commands.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/commands.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/commands.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/commands.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/commands.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/commands.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/commands.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/commands.c.o
 .PHONY : commands.c.o
 
 commands.i: commands.c.i
@@ -445,15 +445,15 @@ commands.i: commands.c.i
 
 # target to preprocess a source file
 commands.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/commands.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/commands.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/commands.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/commands.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/commands.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/commands.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/commands.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/commands.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/commands.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/commands.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/commands.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/commands.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/commands.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/commands.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/commands.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/commands.c.i
 .PHONY : commands.c.i
 
 commands.s: commands.c.s
@@ -462,15 +462,15 @@ commands.s: commands.c.s
 
 # target to generate assembly for a file
 commands.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/commands.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/commands.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/commands.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/commands.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/commands.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/commands.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/commands.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/commands.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/commands.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/commands.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/commands.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/commands.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/commands.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/commands.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/commands.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/commands.c.s
 .PHONY : commands.c.s
 
 device.o: device.c.o
@@ -479,14 +479,14 @@ device.o: device.c.o
 
 # target to build an object file
 device.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/device.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/device.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/device.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/device.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/device.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/device.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/device.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/device.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/device.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/device.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/device.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/device.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/device.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/device.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device.c.o
 .PHONY : device.c.o
 
 device.i: device.c.i
@@ -495,14 +495,14 @@ device.i: device.c.i
 
 # target to preprocess a source file
 device.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/device.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/device.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/device.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/device.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/device.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/device.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/device.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/device.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/device.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/device.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/device.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/device.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/device.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/device.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device.c.i
 .PHONY : device.c.i
 
 device.s: device.c.s
@@ -511,14 +511,14 @@ device.s: device.c.s
 
 # target to generate assembly for a file
 device.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/device.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/device.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/device.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/device.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/device.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/device.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/device.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/device.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/device.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/device.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/device.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/device.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/device.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/device.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device.c.s
 .PHONY : device.c.s
 
 device_expl.o: device_expl.c.o
@@ -527,7 +527,7 @@ device_expl.o: device_expl.c.o
 
 # target to build an object file
 device_expl.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device_expl.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device_expl.c.o
 .PHONY : device_expl.c.o
 
 device_expl.i: device_expl.c.i
@@ -536,7 +536,7 @@ device_expl.i: device_expl.c.i
 
 # target to preprocess a source file
 device_expl.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device_expl.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device_expl.c.i
 .PHONY : device_expl.c.i
 
 device_expl.s: device_expl.c.s
@@ -545,7 +545,7 @@ device_expl.s: device_expl.c.s
 
 # target to generate assembly for a file
 device_expl.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device_expl.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/device_expl.c.s
 .PHONY : device_expl.c.s
 
 download_firmware_expl.o: download_firmware_expl.c.o
@@ -554,7 +554,7 @@ download_firmware_expl.o: download_firmware_expl.c.o
 
 # target to build an object file
 download_firmware_expl.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/download_firmware_expl.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/download_firmware_expl.c.o
 .PHONY : download_firmware_expl.c.o
 
 download_firmware_expl.i: download_firmware_expl.c.i
@@ -563,7 +563,7 @@ download_firmware_expl.i: download_firmware_expl.c.i
 
 # target to preprocess a source file
 download_firmware_expl.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/download_firmware_expl.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/download_firmware_expl.c.i
 .PHONY : download_firmware_expl.c.i
 
 download_firmware_expl.s: download_firmware_expl.c.s
@@ -572,7 +572,7 @@ download_firmware_expl.s: download_firmware_expl.c.s
 
 # target to generate assembly for a file
 download_firmware_expl.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/download_firmware_expl.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/download_firmware_expl.c.s
 .PHONY : download_firmware_expl.c.s
 
 download_package_expl.o: download_package_expl.c.o
@@ -581,7 +581,7 @@ download_package_expl.o: download_package_expl.c.o
 
 # target to build an object file
 download_package_expl.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/download_package_expl.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/download_package_expl.c.o
 .PHONY : download_package_expl.c.o
 
 download_package_expl.i: download_package_expl.c.i
@@ -590,7 +590,7 @@ download_package_expl.i: download_package_expl.c.i
 
 # target to preprocess a source file
 download_package_expl.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/download_package_expl.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/download_package_expl.c.i
 .PHONY : download_package_expl.c.i
 
 download_package_expl.s: download_package_expl.c.s
@@ -599,7 +599,7 @@ download_package_expl.s: download_package_expl.c.s
 
 # target to generate assembly for a file
 download_package_expl.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/download_package_expl.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/download_package_expl.c.s
 .PHONY : download_package_expl.c.s
 
 errors.o: errors.c.o
@@ -608,16 +608,16 @@ errors.o: errors.c.o
 
 # target to build an object file
 errors.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/errors.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/errors.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/errors.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/errors.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/errors.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/errors.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/errors.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/errors.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/errors.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/errors.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/errors.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/errors.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/errors.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/errors.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/errors.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/errors.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/errors.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/errors.c.o
 .PHONY : errors.c.o
 
 errors.i: errors.c.i
@@ -626,16 +626,16 @@ errors.i: errors.c.i
 
 # target to preprocess a source file
 errors.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/errors.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/errors.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/errors.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/errors.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/errors.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/errors.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/errors.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/errors.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/errors.c.i
 .PHONY : errors.c.i
 
 errors.s: errors.c.s
@@ -644,16 +644,16 @@ errors.s: errors.c.s
 
 # target to generate assembly for a file
 errors.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/errors.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/errors.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/errors.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/errors.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/errors.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/errors.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/errors.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/errors.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/errors.c.s
 .PHONY : errors.c.s
 
 gateway_expl.o: gateway_expl.c.o
@@ -662,7 +662,7 @@ gateway_expl.o: gateway_expl.c.o
 
 # target to build an object file
 gateway_expl.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/gateway_expl.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/gateway_expl.c.o
 .PHONY : gateway_expl.c.o
 
 gateway_expl.i: gateway_expl.c.i
@@ -671,7 +671,7 @@ gateway_expl.i: gateway_expl.c.i
 
 # target to preprocess a source file
 gateway_expl.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/gateway_expl.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/gateway_expl.c.i
 .PHONY : gateway_expl.c.i
 
 gateway_expl.s: gateway_expl.c.s
@@ -680,7 +680,7 @@ gateway_expl.s: gateway_expl.c.s
 
 # target to generate assembly for a file
 gateway_expl.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/gateway_expl.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/gateway_expl.c.s
 .PHONY : gateway_expl.c.s
 
 http_transfer_chunk.o: http_transfer_chunk.c.o
@@ -689,7 +689,7 @@ http_transfer_chunk.o: http_transfer_chunk.c.o
 
 # target to build an object file
 http_transfer_chunk.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/http_transfer_chunk.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/http_transfer_chunk.c.o
 .PHONY : http_transfer_chunk.c.o
 
 http_transfer_chunk.i: http_transfer_chunk.c.i
@@ -698,7 +698,7 @@ http_transfer_chunk.i: http_transfer_chunk.c.i
 
 # target to preprocess a source file
 http_transfer_chunk.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/http_transfer_chunk.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/http_transfer_chunk.c.i
 .PHONY : http_transfer_chunk.c.i
 
 http_transfer_chunk.s: http_transfer_chunk.c.s
@@ -707,7 +707,7 @@ http_transfer_chunk.s: http_transfer_chunk.c.s
 
 # target to generate assembly for a file
 http_transfer_chunk.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/http_transfer_chunk.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/http_transfer_chunk.c.s
 .PHONY : http_transfer_chunk.c.s
 
 settings.o: settings.c.o
@@ -716,16 +716,16 @@ settings.o: settings.c.o
 
 # target to build an object file
 settings.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/settings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/settings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/settings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/settings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/settings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/settings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/settings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/settings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/settings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/settings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/settings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/settings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/settings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/settings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/settings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/settings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/settings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/settings.c.o
 .PHONY : settings.c.o
 
 settings.i: settings.c.i
@@ -734,16 +734,16 @@ settings.i: settings.c.i
 
 # target to preprocess a source file
 settings.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/settings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/settings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/settings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/settings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/settings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/settings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/settings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/settings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/settings.c.i
 .PHONY : settings.c.i
 
 settings.s: settings.c.s
@@ -752,16 +752,16 @@ settings.s: settings.c.s
 
 # target to generate assembly for a file
 settings.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/settings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/settings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/settings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/settings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/settings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/settings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/settings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/settings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/settings.c.s
 .PHONY : settings.c.s
 
 test.o: test.c.o
@@ -770,7 +770,7 @@ test.o: test.c.o
 
 # target to build an object file
 test.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/test.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/test.c.o
 .PHONY : test.c.o
 
 test.i: test.c.i
@@ -779,7 +779,7 @@ test.i: test.c.i
 
 # target to preprocess a source file
 test.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/test.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/test.c.i
 .PHONY : test.c.i
 
 test.s: test.c.s
@@ -788,7 +788,7 @@ test.s: test.c.s
 
 # target to generate assembly for a file
 test.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/test.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/test.c.s
 .PHONY : test.c.s
 
 upload_file_expl.o: upload_file_expl.c.o
@@ -797,7 +797,7 @@ upload_file_expl.o: upload_file_expl.c.o
 
 # target to build an object file
 upload_file_expl.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/upload_file_expl.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/upload_file_expl.c.o
 .PHONY : upload_file_expl.c.o
 
 upload_file_expl.i: upload_file_expl.c.i
@@ -806,7 +806,7 @@ upload_file_expl.i: upload_file_expl.c.i
 
 # target to preprocess a source file
 upload_file_expl.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/upload_file_expl.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/upload_file_expl.c.i
 .PHONY : upload_file_expl.c.i
 
 upload_file_expl.s: upload_file_expl.c.s
@@ -815,7 +815,7 @@ upload_file_expl.s: upload_file_expl.c.s
 
 # target to generate assembly for a file
 upload_file_expl.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/upload_file_expl.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/upload_file_expl.c.s
 .PHONY : upload_file_expl.c.s
 
 warnings.o: warnings.c.o
@@ -824,16 +824,16 @@ warnings.o: warnings.c.o
 
 # target to build an object file
 warnings.c.o:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/warnings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/warnings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/warnings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/warnings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/warnings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/warnings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/warnings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/warnings.c.o
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/warnings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/warnings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/warnings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/warnings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/warnings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/warnings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/warnings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/warnings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/warnings.c.o
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/warnings.c.o
 .PHONY : warnings.c.o
 
 warnings.i: warnings.c.i
@@ -842,16 +842,16 @@ warnings.i: warnings.c.i
 
 # target to preprocess a source file
 warnings.c.i:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/warnings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/warnings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/warnings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/warnings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/warnings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/warnings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/warnings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/warnings.c.i
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/warnings.c.i
 .PHONY : warnings.c.i
 
 warnings.s: warnings.c.s
@@ -860,16 +860,16 @@ warnings.s: warnings.c.s
 
 # target to generate assembly for a file
 warnings.c.s:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/warnings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/warnings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/warnings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/warnings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/warnings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/warnings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/warnings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/warnings.c.s
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/http_transfer_chunk.dir/build.make demos/src/CMakeFiles/http_transfer_chunk.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_package_example.dir/build.make demos/src/CMakeFiles/download_package_example.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/test.dir/build.make demos/src/CMakeFiles/test.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/download_firmware_example.dir/build.make demos/src/CMakeFiles/download_firmware_example.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Industry_ES.dir/build.make demos/src/CMakeFiles/device_example_Industry_ES.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/appuser_example.dir/build.make demos/src/CMakeFiles/appuser_example.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/upload_file_example.dir/build.make demos/src/CMakeFiles/upload_file_example.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example_Home_ES.dir/build.make demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/gateway_example.dir/build.make demos/src/CMakeFiles/gateway_example.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp && $(MAKE) -f demos/src/CMakeFiles/device_example.dir/build.make demos/src/CMakeFiles/device_example.dir/warnings.c.s
 .PHONY : warnings.c.s
 
 # Help Target
@@ -955,6 +955,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/aworks/private/ZioTestApp && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

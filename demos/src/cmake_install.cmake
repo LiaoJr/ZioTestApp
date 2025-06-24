@@ -1,4 +1,4 @@
-# Install script for directory: /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src
+# Install script for directory: /home/aworks/private/ZioTestApp/demos/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,6 +1,5 @@
 {
     "files.associations": {
-        "*.ST": "st",
         "zlg_iot_mqtt_client_interface.h": "c",
         "client.h": "c",
         "modbus.h": "c",
@@ -11,7 +10,6 @@
         "database.h": "c",
         "test_order.h": "c",
         "stdlib.h": "c",
-        "ostream": "c",
-        "random": "c"
+        "ostream": "c"
     }
 }

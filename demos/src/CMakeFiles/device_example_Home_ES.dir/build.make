@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ljw-zlg/work/mqttproto_V2.0.3.240626
+CMAKE_SOURCE_DIR = /home/aworks/private/ZioTestApp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ljw-zlg/work/mqttproto_V2.0.3.240626
+CMAKE_BINARY_DIR = /home/aworks/private/ZioTestApp
 
 # Include any dependencies generated for this target.
 include demos/src/CMakeFiles/device_example_Home_ES.dir/depend.make
@@ -59,81 +59,81 @@ include demos/src/CMakeFiles/device_example_Home_ES.dir/flags.make
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.o: demos/src/CMakeFiles/device_example_Home_ES.dir/flags.make
 demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.o: demos/src/Home_ES/device_expl_Home_ES.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ljw-zlg/work/mqttproto_V2.0.3.240626/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.o"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.o   -c /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/Home_ES/device_expl_Home_ES.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aworks/private/ZioTestApp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.o"
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.o   -c /home/aworks/private/ZioTestApp/demos/src/Home_ES/device_expl_Home_ES.c
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.i"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/Home_ES/device_expl_Home_ES.c > CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.i
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aworks/private/ZioTestApp/demos/src/Home_ES/device_expl_Home_ES.c > CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.i
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.s"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/Home_ES/device_expl_Home_ES.c -o CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.s
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aworks/private/ZioTestApp/demos/src/Home_ES/device_expl_Home_ES.c -o CMakeFiles/device_example_Home_ES.dir/Home_ES/device_expl_Home_ES.c.s
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.o: demos/src/CMakeFiles/device_example_Home_ES.dir/flags.make
 demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.o: demos/src/commands.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ljw-zlg/work/mqttproto_V2.0.3.240626/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.o"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/commands.c.o   -c /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/commands.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aworks/private/ZioTestApp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.o"
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/commands.c.o   -c /home/aworks/private/ZioTestApp/demos/src/commands.c
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/device_example_Home_ES.dir/commands.c.i"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/commands.c > CMakeFiles/device_example_Home_ES.dir/commands.c.i
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aworks/private/ZioTestApp/demos/src/commands.c > CMakeFiles/device_example_Home_ES.dir/commands.c.i
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/commands.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/device_example_Home_ES.dir/commands.c.s"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/commands.c -o CMakeFiles/device_example_Home_ES.dir/commands.c.s
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aworks/private/ZioTestApp/demos/src/commands.c -o CMakeFiles/device_example_Home_ES.dir/commands.c.s
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.o: demos/src/CMakeFiles/device_example_Home_ES.dir/flags.make
 demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.o: demos/src/Home_ES/device_Home_ES.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ljw-zlg/work/mqttproto_V2.0.3.240626/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.o"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.o   -c /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/Home_ES/device_Home_ES.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aworks/private/ZioTestApp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.o"
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.o   -c /home/aworks/private/ZioTestApp/demos/src/Home_ES/device_Home_ES.c
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.i"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/Home_ES/device_Home_ES.c > CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.i
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aworks/private/ZioTestApp/demos/src/Home_ES/device_Home_ES.c > CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.i
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.s"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/Home_ES/device_Home_ES.c -o CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.s
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aworks/private/ZioTestApp/demos/src/Home_ES/device_Home_ES.c -o CMakeFiles/device_example_Home_ES.dir/Home_ES/device_Home_ES.c.s
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.o: demos/src/CMakeFiles/device_example_Home_ES.dir/flags.make
 demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.o: demos/src/errors.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ljw-zlg/work/mqttproto_V2.0.3.240626/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.o"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/errors.c.o   -c /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/errors.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aworks/private/ZioTestApp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.o"
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/errors.c.o   -c /home/aworks/private/ZioTestApp/demos/src/errors.c
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/device_example_Home_ES.dir/errors.c.i"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/errors.c > CMakeFiles/device_example_Home_ES.dir/errors.c.i
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aworks/private/ZioTestApp/demos/src/errors.c > CMakeFiles/device_example_Home_ES.dir/errors.c.i
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/errors.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/device_example_Home_ES.dir/errors.c.s"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/errors.c -o CMakeFiles/device_example_Home_ES.dir/errors.c.s
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aworks/private/ZioTestApp/demos/src/errors.c -o CMakeFiles/device_example_Home_ES.dir/errors.c.s
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.o: demos/src/CMakeFiles/device_example_Home_ES.dir/flags.make
 demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.o: demos/src/settings.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ljw-zlg/work/mqttproto_V2.0.3.240626/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.o"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/settings.c.o   -c /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/settings.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aworks/private/ZioTestApp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.o"
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/settings.c.o   -c /home/aworks/private/ZioTestApp/demos/src/settings.c
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/device_example_Home_ES.dir/settings.c.i"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/settings.c > CMakeFiles/device_example_Home_ES.dir/settings.c.i
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aworks/private/ZioTestApp/demos/src/settings.c > CMakeFiles/device_example_Home_ES.dir/settings.c.i
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/settings.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/device_example_Home_ES.dir/settings.c.s"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/settings.c -o CMakeFiles/device_example_Home_ES.dir/settings.c.s
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aworks/private/ZioTestApp/demos/src/settings.c -o CMakeFiles/device_example_Home_ES.dir/settings.c.s
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.o: demos/src/CMakeFiles/device_example_Home_ES.dir/flags.make
 demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.o: demos/src/warnings.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ljw-zlg/work/mqttproto_V2.0.3.240626/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.o"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/warnings.c.o   -c /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/warnings.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aworks/private/ZioTestApp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.o"
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/device_example_Home_ES.dir/warnings.c.o   -c /home/aworks/private/ZioTestApp/demos/src/warnings.c
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/device_example_Home_ES.dir/warnings.c.i"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/warnings.c > CMakeFiles/device_example_Home_ES.dir/warnings.c.i
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aworks/private/ZioTestApp/demos/src/warnings.c > CMakeFiles/device_example_Home_ES.dir/warnings.c.i
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/warnings.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/device_example_Home_ES.dir/warnings.c.s"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/warnings.c -o CMakeFiles/device_example_Home_ES.dir/warnings.c.s
+	cd /home/aworks/private/ZioTestApp/demos/src && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aworks/private/ZioTestApp/demos/src/warnings.c -o CMakeFiles/device_example_Home_ES.dir/warnings.c.s
 
 # Object files for target device_example_Home_ES
 device_example_Home_ES_OBJECTS = \
@@ -158,8 +158,8 @@ bin/device_example_Home_ES: bin/libclient.a
 bin/device_example_Home_ES: bin/libnetwork.a
 bin/device_example_Home_ES: bin/libjsmn.a
 bin/device_example_Home_ES: demos/src/CMakeFiles/device_example_Home_ES.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ljw-zlg/work/mqttproto_V2.0.3.240626/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable ../../bin/device_example_Home_ES"
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/device_example_Home_ES.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aworks/private/ZioTestApp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable ../../bin/device_example_Home_ES"
+	cd /home/aworks/private/ZioTestApp/demos/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/device_example_Home_ES.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 demos/src/CMakeFiles/device_example_Home_ES.dir/build: bin/device_example_Home_ES
@@ -167,10 +167,10 @@ demos/src/CMakeFiles/device_example_Home_ES.dir/build: bin/device_example_Home_E
 .PHONY : demos/src/CMakeFiles/device_example_Home_ES.dir/build
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/clean:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src && $(CMAKE_COMMAND) -P CMakeFiles/device_example_Home_ES.dir/cmake_clean.cmake
+	cd /home/aworks/private/ZioTestApp/demos/src && $(CMAKE_COMMAND) -P CMakeFiles/device_example_Home_ES.dir/cmake_clean.cmake
 .PHONY : demos/src/CMakeFiles/device_example_Home_ES.dir/clean
 
 demos/src/CMakeFiles/device_example_Home_ES.dir/depend:
-	cd /home/ljw-zlg/work/mqttproto_V2.0.3.240626 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ljw-zlg/work/mqttproto_V2.0.3.240626 /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src /home/ljw-zlg/work/mqttproto_V2.0.3.240626 /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src /home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/CMakeFiles/device_example_Home_ES.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aworks/private/ZioTestApp && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aworks/private/ZioTestApp /home/aworks/private/ZioTestApp/demos/src /home/aworks/private/ZioTestApp /home/aworks/private/ZioTestApp/demos/src /home/aworks/private/ZioTestApp/demos/src/CMakeFiles/device_example_Home_ES.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : demos/src/CMakeFiles/device_example_Home_ES.dir/depend
 

@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/commands.c" "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/CMakeFiles/download_firmware_example.dir/commands.c.o"
-  "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/device.c" "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/CMakeFiles/download_firmware_example.dir/device.c.o"
-  "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/download_firmware_expl.c" "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/CMakeFiles/download_firmware_example.dir/download_firmware_expl.c.o"
-  "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/errors.c" "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/CMakeFiles/download_firmware_example.dir/errors.c.o"
-  "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/settings.c" "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/CMakeFiles/download_firmware_example.dir/settings.c.o"
-  "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/warnings.c" "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/CMakeFiles/download_firmware_example.dir/warnings.c.o"
+  "/home/aworks/private/ZioTestApp/demos/src/commands.c" "/home/aworks/private/ZioTestApp/demos/src/CMakeFiles/download_firmware_example.dir/commands.c.o"
+  "/home/aworks/private/ZioTestApp/demos/src/device.c" "/home/aworks/private/ZioTestApp/demos/src/CMakeFiles/download_firmware_example.dir/device.c.o"
+  "/home/aworks/private/ZioTestApp/demos/src/download_firmware_expl.c" "/home/aworks/private/ZioTestApp/demos/src/CMakeFiles/download_firmware_example.dir/download_firmware_expl.c.o"
+  "/home/aworks/private/ZioTestApp/demos/src/errors.c" "/home/aworks/private/ZioTestApp/demos/src/CMakeFiles/download_firmware_example.dir/errors.c.o"
+  "/home/aworks/private/ZioTestApp/demos/src/settings.c" "/home/aworks/private/ZioTestApp/demos/src/CMakeFiles/download_firmware_example.dir/settings.c.o"
+  "/home/aworks/private/ZioTestApp/demos/src/warnings.c" "/home/aworks/private/ZioTestApp/demos/src/CMakeFiles/download_firmware_example.dir/warnings.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -46,9 +46,9 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/zws_sdk/protocol/common/CMakeFiles/client.dir/DependInfo.cmake"
-  "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/zws_sdk/network/CMakeFiles/network.dir/DependInfo.cmake"
-  "/home/ljw-zlg/work/mqttproto_V2.0.3.240626/3rd/jsmn/CMakeFiles/jsmn.dir/DependInfo.cmake"
+  "/home/aworks/private/ZioTestApp/zws_sdk/protocol/common/CMakeFiles/client.dir/DependInfo.cmake"
+  "/home/aworks/private/ZioTestApp/zws_sdk/network/CMakeFiles/network.dir/DependInfo.cmake"
+  "/home/aworks/private/ZioTestApp/3rd/jsmn/CMakeFiles/jsmn.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

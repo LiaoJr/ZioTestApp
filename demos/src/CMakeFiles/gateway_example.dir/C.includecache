@@ -6,53 +6,53 @@
 
 #IncludeRegexTransform: 
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/commands.c
+/home/aworks/private/ZioTestApp/demos/src/commands.c
 client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/client.h
+/home/aworks/private/ZioTestApp/demos/src/client.h
 zlg_iot_http_upload_file_client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/zlg_iot_http_upload_file_client.h
+/home/aworks/private/ZioTestApp/demos/src/zlg_iot_http_upload_file_client.h
 commands.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/commands.h
+/home/aworks/private/ZioTestApp/demos/src/commands.h
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/commands.h
+/home/aworks/private/ZioTestApp/demos/src/commands.h
 command.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/command.h
+/home/aworks/private/ZioTestApp/demos/src/command.h
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/device.c
+/home/aworks/private/ZioTestApp/demos/src/device.c
 device.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/device.h
+/home/aworks/private/ZioTestApp/demos/src/device.h
 client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/client.h
+/home/aworks/private/ZioTestApp/demos/src/client.h
 commands.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/commands.h
+/home/aworks/private/ZioTestApp/demos/src/commands.h
 settings.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/settings.h
+/home/aworks/private/ZioTestApp/demos/src/settings.h
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/device.h
+/home/aworks/private/ZioTestApp/demos/src/device.h
 client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/client.h
+/home/aworks/private/ZioTestApp/demos/src/client.h
 errors.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/errors.h
+/home/aworks/private/ZioTestApp/demos/src/errors.h
 warnings.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/warnings.h
+/home/aworks/private/ZioTestApp/demos/src/warnings.h
 device_consts.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/device_consts.h
+/home/aworks/private/ZioTestApp/demos/src/device_consts.h
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/device_consts.h
+/home/aworks/private/ZioTestApp/demos/src/device_consts.h
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/errors.c
+/home/aworks/private/ZioTestApp/demos/src/errors.c
 errors.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/errors.h
+/home/aworks/private/ZioTestApp/demos/src/errors.h
 stdio.h
 -
 stdlib.h
 -
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/errors.h
+/home/aworks/private/ZioTestApp/demos/src/errors.h
 client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/client.h
+/home/aworks/private/ZioTestApp/demos/src/client.h
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/gateway_expl.c
+/home/aworks/private/ZioTestApp/demos/src/gateway_expl.c
 stdio.h
 -
 stdlib.h
@@ -64,41 +64,41 @@ limits.h
 string.h
 -
 client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/client.h
+/home/aworks/private/ZioTestApp/demos/src/client.h
 device.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/device.h
+/home/aworks/private/ZioTestApp/demos/src/device.h
 mqtt_client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/mqtt_client.h
+/home/aworks/private/ZioTestApp/demos/src/mqtt_client.h
 zlg_iot_log.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/zlg_iot_log.h
+/home/aworks/private/ZioTestApp/demos/src/zlg_iot_log.h
 zlg_iot_config.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/zlg_iot_config.h
+/home/aworks/private/ZioTestApp/demos/src/zlg_iot_config.h
 zlg_iot_version.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/zlg_iot_version.h
+/home/aworks/private/ZioTestApp/demos/src/zlg_iot_version.h
 zlg_iot_http_auth_client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/zlg_iot_http_auth_client.h
+/home/aworks/private/ZioTestApp/demos/src/zlg_iot_http_auth_client.h
 zlg_iot_mqtt_client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/zlg_iot_mqtt_client.h
+/home/aworks/private/ZioTestApp/demos/src/zlg_iot_mqtt_client.h
 zlg_iot_mqtt_client_interface.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/zlg_iot_mqtt_client_interface.h
+/home/aworks/private/ZioTestApp/demos/src/zlg_iot_mqtt_client_interface.h
 unistd.h
 -
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/settings.c
+/home/aworks/private/ZioTestApp/demos/src/settings.c
 client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/client.h
+/home/aworks/private/ZioTestApp/demos/src/client.h
 settings.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/settings.h
+/home/aworks/private/ZioTestApp/demos/src/settings.h
 device_consts.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/device_consts.h
+/home/aworks/private/ZioTestApp/demos/src/device_consts.h
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/warnings.c
+/home/aworks/private/ZioTestApp/demos/src/warnings.c
 warnings.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/warnings.h
+/home/aworks/private/ZioTestApp/demos/src/warnings.h
 
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/warnings.h
+/home/aworks/private/ZioTestApp/demos/src/warnings.h
 client.h
-/home/ljw-zlg/work/mqttproto_V2.0.3.240626/demos/src/client.h
+/home/aworks/private/ZioTestApp/demos/src/client.h
 
 zws_sdk/network/include/network_interface.h
 stdint.h

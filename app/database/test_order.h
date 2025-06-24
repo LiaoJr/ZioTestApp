@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include "sqlite3.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -10,6 +11,7 @@ extern "C" {
 
 typedef struct test_order test_order_t;
 typedef struct test_reslut test_reslut_t;
+typedef struct upload_info upload_info_t;
 
 struct test_order
 {
@@ -31,12 +33,21 @@ struct test_reslut
     const char* desc;
 };
 
+struct upload_info
+{
+    sqlite3* db;
+    uint32_t upload_id;
+    uint32_t upload_date;
+};
+
 test_order_t* test_order_create(
                         uint32_t product_id,
                         uint32_t serial_no,
                         uint64_t uid,
                         uint32_t test_reslut_size,
                         test_reslut_t test_reslut[]);
+
+upload_info_t* get_upload_info_obj();
 
 #ifdef __cplusplus
 }

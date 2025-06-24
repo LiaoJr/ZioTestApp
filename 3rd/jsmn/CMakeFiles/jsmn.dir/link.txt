@@ -1,2 +1,0 @@
-aarch64-linux-gnu-ar qc ../../bin/libjsmn.a  CMakeFiles/jsmn.dir/jsmn.c.o CMakeFiles/jsmn.dir/jsmn_wrapper.c.o
-aarch64-linux-gnu-ranlib ../../bin/libjsmn.a

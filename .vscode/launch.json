@@ -8,10 +8,10 @@
             "name": "gdbserver",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/app",
+            "program": "${workspaceFolder}/bin/app_test",
             "MIMode": "gdb",
-            "miDebuggerPath": "/home/ljw-zlg/work/arm-gdb/bin/arm-linux-gdb",
-            "miDebuggerServerAddress": "192.168.2.136:2331",
+            "miDebuggerPath": "/home/aworks/arm-gdb/bin/arm-linux-gdb",
+            "miDebuggerServerAddress": "192.168.1.136:12345",
             "cwd":"${workspaceFolder}",
             "setupCommands": [
                 {

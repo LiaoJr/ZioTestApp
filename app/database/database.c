@@ -82,7 +82,7 @@ int database_insert_order(sqlite3* db, test_order_t* test_order)
     if (!db) {
         return -1;
     }
-    sprintf(buf, "INSERT INTO test_order (product_id, serial_no, uid, date) VALUES (%d, %d, %ld, %ld);",
+    sprintf(buf, "INSERT INTO test_order (product_id, serial_no, uid, date) VALUES (%d, %d, %d, %d);",
     test_order->product_id,
     test_order->serial_no,
     test_order->uid,
@@ -221,7 +221,7 @@ __end:
     }
     return rc;
 }
-const char* database_get_config(sqlite3* db, const char * key)
+const char* database_get_config(sqlite3* db, const char* key)
 {
     int rc = 0;
     char* err_msg = NULL;
@@ -229,19 +229,56 @@ const char* database_get_config(sqlite3* db, const char * key)
     sqlite3_stmt* stmt; 
     static char value[128] = {0};
 
-    sprintf(buf, "select value from configuration where key = '%s'", key);
-    const char* sql = buf;
 
+    if (!db) {
+        return NULL;
+    }
+    if (!key) {
+        return NULL;
+    }
+
+    sprintf(buf, "select value from configuration where key = '%s';", key);
+    const char* sql = buf;
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
     if (rc != SQLITE_OK) {
         printf("Can not find %s: %s\r\n",key , err_msg);
-        return value;
+        return NULL;
     }
 
-    while (sqlite3_step(stmt) == SQLITE_ROW) {
-        const char* _value =sqlite3_column_text(stmt, 0);
-        // memcpy(value, , strlen);
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        char* _value = sqlite3_column_text(stmt, 0);
+        memset(value, 0, sizeof(value));
+        memcpy(value, _value, strlen(_value));
+        sqlite3_finalize(stmt);
+    } else {
+        return NULL;
+        sqlite3_finalize(stmt);
     }
-    sqlite3_finalize(stmt);
     return value;
+}
+int database_set_config(sqlite3* db, const char* key, const char* value)
+{
+    int rc = 0;
+    char* err_msg = NULL;
+    char buf[512] = {0};   
+    sqlite3_stmt* stmt; 
+
+    if (!db) {
+        return -1;
+    }
+    if (!key) {
+        return -1;
+    }
+    if (!value) {
+        return -1;
+    }
+
+    sprintf(buf, "update  configuration set value = '%s' where key = '%s';", value, key);
+    const char* sql = buf;
+    rc = sqlite3_exec(db, sql, NULL, NULL, &err_msg);
+    if (rc != SQLITE_OK) {
+        printf("Can not set config: %s\r\n", err_msg);
+        return -1;
+    }
+    return 0;
 }

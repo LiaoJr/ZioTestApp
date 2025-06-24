@@ -12,7 +12,7 @@ include_directories(${PROJECT_SOURCE_DIR}/app/upgrade)
 include_directories(${PROJECT_SOURCE_DIR}/app/database)
 include_directories(${PROJECT_SOURCE_DIR}/app/lib/sqlite3/include)
 
-set(PRJ MasterOfZio)
+set(PRJ app)
 add_executable(${PRJ} main.c ${LIB_SRC})
 # #链接库
 target_link_libraries(${PRJ} client network modbus zecm app_pugrade utils ecat_master sqlite3 database ${SYS_LIBS})

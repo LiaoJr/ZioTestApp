@@ -12,6 +12,22 @@
 #include "modbus_tcp_server.h"
 #include "ecat_master.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <limits.h>
+#include <string.h>
+#include "client.h"
+
+#include "zlg_iot_log.h"
+#include "zlg_iot_config.h"
+#include "zlg_iot_version.h"
+#include "zlg_iot_http_auth_client.h"
+#include "zlg_iot_mqtt_client.h"
+#include "zlg_iot_mqtt_client_interface.h"
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 #define _MSG_(flt,fmt,args...)  printf(flt ": %s<%d>: " fmt "\n", __PRETTY_FUNCTION__, __LINE__, ##args)
@@ -43,7 +59,14 @@ extern ECAT_SIMPLE_START_CONTEXT ctx;
 */
 int main(int argc, char **argv)
 {
+    char buff[256];
+    params_t params;
+    mqtt_client_t mq;
+    ZLG_IoT_Client mqclient;
+    IoT_Error_t rc = FAILURE;
     ECAT_RESULT ret;
+
+    request_init(&params, buff, sizeof(buff));
 
     // 将当前线程转为实时线程，优先级为50
     struct sched_param sched;

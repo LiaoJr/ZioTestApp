@@ -1,2 +1,0 @@
-aarch64-linux-gnu-ar qc ../../bin/libecat_master.a  CMakeFiles/ecat_master.dir/ecat_master.c.o CMakeFiles/ecat_master.dir/eeprom.c.o CMakeFiles/ecat_master.dir/slave.c.o
-aarch64-linux-gnu-ranlib ../../bin/libecat_master.a

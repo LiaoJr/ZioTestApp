@@ -1,4 +1,4 @@
-# Install script for directory: /home/ljw-zlg/work/ZioTestApp/app/upgrade
+# Install script for directory: /home/aworks/private/ZioTestApp/app/upgrade
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

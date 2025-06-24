@@ -1,2 +1,0 @@
-aarch64-linux-gnu-ar qc ../../bin/libapp_pugrade.a  CMakeFiles/app_pugrade.dir/app_upgrade.c.o
-aarch64-linux-gnu-ranlib ../../bin/libapp_pugrade.a

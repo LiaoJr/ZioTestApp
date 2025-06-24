@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include "test_order.h"
 
+static upload_info_t __g_upload_info = {0};
+
 test_order_t* test_order_create(
                         uint32_t product_id,
                         uint32_t serial_no,
@@ -38,4 +40,9 @@ __err:
         test_order = NULL;
     }
     return test_order;
+}
+
+upload_info_t* get_upload_info_obj()
+{
+    return &__g_upload_info;
 }

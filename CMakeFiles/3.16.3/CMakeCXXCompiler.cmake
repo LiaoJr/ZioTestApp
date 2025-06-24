@@ -19,9 +19,9 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "aarch64-linux-gnu-ar")
+set(CMAKE_AR "/usr/bin/aarch64-linux-gnu-ar")
 set(CMAKE_CXX_COMPILER_AR "/usr/bin/aarch64-linux-gnu-gcc-ar-9")
-set(CMAKE_RANLIB "aarch64-linux-gnu-ranlib")
+set(CMAKE_RANLIB "/usr/bin/aarch64-linux-gnu-ranlib")
 set(CMAKE_CXX_COMPILER_RANLIB "/usr/bin/aarch64-linux-gnu-gcc-ranlib-9")
 set(CMAKE_LINKER "/usr/bin/aarch64-linux-gnu-ld")
 set(CMAKE_MT "")
