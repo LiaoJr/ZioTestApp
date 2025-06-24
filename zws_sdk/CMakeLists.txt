@@ -1,0 +1,5 @@
+﻿add_subdirectory(network)
+add_subdirectory(protocol/common)
+#if(NOT WIN32)
+#  add_subdirectory(protocol/tests)
+#endif()

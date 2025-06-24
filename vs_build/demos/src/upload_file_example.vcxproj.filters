@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\demos\src\upload_file_expl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\demos\src\commands.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\demos\src\device.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\demos\src\errors.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\demos\src\settings.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\demos\src\warnings.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="X:\zlgCloud\solar\mqttproto\demos\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CCBB74B2-0700-3836-93C3-5801ACEEEA48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,2 @@
+aarch64-linux-gnu-ar qc ../../bin/libutils.a  CMakeFiles/utils.dir/log.c.o CMakeFiles/utils.dir/ticks.c.o
+aarch64-linux-gnu-ranlib ../../bin/libutils.a

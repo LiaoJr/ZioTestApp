@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ljw-zlg/work/ZioTestApp/app/database/database.c
+sqlite3.h
+/home/ljw-zlg/work/ZioTestApp/app/database/sqlite3.h
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+test_order.h
+/home/ljw-zlg/work/ZioTestApp/app/database/test_order.h
+time.h
+-
+
+/home/ljw-zlg/work/ZioTestApp/app/database/test_order.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+test_order.h
+/home/ljw-zlg/work/ZioTestApp/app/database/test_order.h
+
+/home/ljw-zlg/work/ZioTestApp/app/database/test_order.h
+stdio.h
+-
+stdint.h
+-
+
+app/lib/sqlite3/include/sqlite3.h
+stdarg.h
+-
+

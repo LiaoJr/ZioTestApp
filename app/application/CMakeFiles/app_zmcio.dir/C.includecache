@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ljw-zlg/work/mqttproto_V2.0.3.240626/app/application/app_zmcio.c
+stdio.h
+-
+stdint.h
+-
+stdlib.h
+-
+errno.h
+-
+unistd.h
+-
+fcntl.h
+-
+string.h
+-
+termio.h
+-
+sys/time.h
+-
+sys/types.h
+-
+app_zmcio.h
+/home/ljw-zlg/work/mqttproto_V2.0.3.240626/app/application/app_zmcio.h
+log.h
+/home/ljw-zlg/work/mqttproto_V2.0.3.240626/app/application/log.h
+
+/home/ljw-zlg/work/mqttproto_V2.0.3.240626/app/application/app_zmcio.h
+
+app/utils/log.h
+stdlib.h
+-
+stdbool.h
+-
+stdint.h
+-
+

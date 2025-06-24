@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7CB069B8-56C0-3CA5-96BD-5F1D2CD82EAE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="X:\zlgCloud\solar\mqttproto\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule X:/zlgCloud/solar/mqttproto/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SX:/zlgCloud/solar/mqttproto -BX:/zlgCloud/solar/mqttproto/vs_build --check-stamp-file X:/zlgCloud/solar/mqttproto/vs_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeCCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule X:/zlgCloud/solar/mqttproto/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SX:/zlgCloud/solar/mqttproto -BX:/zlgCloud/solar/mqttproto/vs_build --check-stamp-file X:/zlgCloud/solar/mqttproto/vs_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeCCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule X:/zlgCloud/solar/mqttproto/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SX:/zlgCloud/solar/mqttproto -BX:/zlgCloud/solar/mqttproto/vs_build --check-stamp-file X:/zlgCloud/solar/mqttproto/vs_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeCCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule X:/zlgCloud/solar/mqttproto/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SX:/zlgCloud/solar/mqttproto -BX:/zlgCloud/solar/mqttproto/vs_build --check-stamp-file X:/zlgCloud/solar/mqttproto/vs_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeCCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\3.23.0\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\ZERO_CHECK.vcxproj">
+      <Project>{2CE196DC-AF42-33A7-90A8-E322F0415EFA}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\demos\src\appuser_example.vcxproj">
+      <Project>{6AB5DDFC-2B2D-3E73-BB9D-7694FACE3DBA}</Project>
+      <Name>appuser_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\zws_sdk\protocol\common\client.vcxproj">
+      <Project>{1D94C2D2-7996-32F6-B0DF-15C9C0F9A186}</Project>
+      <Name>client</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\demos\src\device_example.vcxproj">
+      <Project>{AFF3037A-212E-35C9-B47C-59715206A673}</Project>
+      <Name>device_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\demos\src\download_firmware_example.vcxproj">
+      <Project>{4EF2B25C-EB12-3A30-B7EB-C9A8581D3732}</Project>
+      <Name>download_firmware_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\demos\src\download_package_example.vcxproj">
+      <Project>{0331AF41-0C69-31D4-85AF-68366DD36C19}</Project>
+      <Name>download_package_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\demos\src\gateway_example.vcxproj">
+      <Project>{B83795BE-70F0-3BDC-B996-652BCBDEEF92}</Project>
+      <Name>gateway_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\demos\src\http_transfer_chunk.vcxproj">
+      <Project>{E2802ED5-71D5-381F-B79E-84C6424C2ED2}</Project>
+      <Name>http_transfer_chunk</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\3rd\jsmn\jsmn.vcxproj">
+      <Project>{9D8E4EDA-47D6-3E7C-838A-68362D6567C9}</Project>
+      <Name>jsmn</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\3rd\jsmn\jsmn_wrapper.vcxproj">
+      <Project>{6C00AA1F-34AF-3A19-883A-E6F8356397BA}</Project>
+      <Name>jsmn_wrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\3rd\mbedtls\library\mbedcrypto.vcxproj">
+      <Project>{3DE6BDB9-2302-3B57-9C58-1EADB3DA25B8}</Project>
+      <Name>mbedcrypto</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\3rd\mbedtls\library\mbedtls.vcxproj">
+      <Project>{F0FF6663-727D-334B-B0C0-1C70EF7B0D24}</Project>
+      <Name>mbedtls</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\3rd\mbedtls\library\mbedx509.vcxproj">
+      <Project>{4E863FAF-2DD0-3767-A15F-097CCF67D640}</Project>
+      <Name>mbedx509</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\zws_sdk\network\network.vcxproj">
+      <Project>{F34DC5A6-7C80-3A30-96A3-483B93EE1EE8}</Project>
+      <Name>network</Name>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\demos\src\upload_file_example.vcxproj">
+      <Project>{E805D0D4-9203-3C82-989B-8F56C84243DF}</Project>
+      <Name>upload_file_example</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

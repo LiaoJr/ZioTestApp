@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="X:\zlgCloud\solar\mqttproto\vs_build\CMakeFiles\9acbd296d9743afd1298472f4aed9534\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6922CCE4-D7B2-3347-B623-A01264BC46F9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

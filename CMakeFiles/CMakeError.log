@@ -1,0 +1,80 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/9.2.1/../../../../aarch64-none-linux-gnu/bin/ld: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: error loading plugin: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: file too short
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/9.2.1/../../../../aarch64-none-linux-gnu/bin/ld: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: error loading plugin: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: file too short
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/aworks/mqttproto_V2.0.3.240626/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f40d4/fast && /usr/bin/make -f CMakeFiles/cmTC_f40d4.dir/build.make CMakeFiles/cmTC_f40d4.dir/build
+make[1]: Entering directory '/home/aworks/mqttproto_V2.0.3.240626/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f40d4.dir/testCCompiler.c.o
+/home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc    -o CMakeFiles/cmTC_f40d4.dir/testCCompiler.c.o   -c /home/aworks/mqttproto_V2.0.3.240626/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_f40d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f40d4.dir/link.txt --verbose=1
+/home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc      CMakeFiles/cmTC_f40d4.dir/testCCompiler.c.o  -o cmTC_f40d4 
+/home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/9.2.1/../../../../aarch64-none-linux-gnu/bin/ld: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: error loading plugin: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: file too short
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_f40d4.dir/build.make:87: cmTC_f40d4] Error 1
+make[1]: Leaving directory '/home/aworks/mqttproto_V2.0.3.240626/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_f40d4/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/9.2.1/../../../../aarch64-none-linux-gnu/bin/ld: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: error loading plugin: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: file too short
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/9.2.1/../../../../aarch64-none-linux-gnu/bin/ld: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: error loading plugin: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: file too short
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/aworks/mqttproto_V2.0.3.240626/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7bc1b/fast && /usr/bin/make -f CMakeFiles/cmTC_7bc1b.dir/build.make CMakeFiles/cmTC_7bc1b.dir/build
+make[1]: Entering directory '/home/aworks/mqttproto_V2.0.3.240626/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7bc1b.dir/testCCompiler.c.o
+/home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc    -o CMakeFiles/cmTC_7bc1b.dir/testCCompiler.c.o   -c /home/aworks/mqttproto_V2.0.3.240626/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_7bc1b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7bc1b.dir/link.txt --verbose=1
+/home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc      CMakeFiles/cmTC_7bc1b.dir/testCCompiler.c.o  -o cmTC_7bc1b 
+/home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/9.2.1/../../../../aarch64-none-linux-gnu/bin/ld: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: error loading plugin: /home/aworks/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/9.2.1/liblto_plugin.so: file too short
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_7bc1b.dir/build.make:87: cmTC_7bc1b] Error 1
+make[1]: Leaving directory '/home/aworks/mqttproto_V2.0.3.240626/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7bc1b/fast] Error 2
+
+
+

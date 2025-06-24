@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4E863FAF-2DD0-3767-A15F-097CCF67D640}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>mbedx509</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">X:\zlgCloud\solar\mqttproto\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mbedx509.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mbedx509</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">X:\zlgCloud\solar\mqttproto\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mbedx509.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mbedx509</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">X:\zlgCloud\solar\mqttproto\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">mbedx509.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">mbedx509</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">X:\zlgCloud\solar\mqttproto\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">mbedx509.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">mbedx509</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -g</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;ZLG_IOT_MQTT_TX_BUF_LEN=1024;ZLG_IOT_MQTT_RX_BUF_LEN=1024;ZLG_IOT_MQTT_NUM_SUBSCRIBE_HANDLERS=20;ZLG_IOT_HTTP_BUFF_SIZE=1023;ZLG_IOT_HTTP_COOKIE_SIZE=1024;ZLG_IOT_HTTP_URL_PATH_LEN=512;ZLG_IOT_HTTP_TOKEN_LEN=1024;ZLG_IOT_DEV_ID_LEN=64;ZLG_IOT_DEV_TYPE_LEN=64;ZLG_IOT_DEV_SECRET_LEN=64;ENABLE_IOT_INFO=true;ENABLE_IOT_WARN=true;ENABLE_IOT_ERROR=true;WITH_MBED_TLS=true;TRANSFER_PROTOCOL="https";ZLG_IOT_AUTH_PORT=8143;ZLG_IOT_ZWS_PACKAGE_PORT=443;_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;ZLG_IOT_MQTT_TX_BUF_LEN=1024;ZLG_IOT_MQTT_RX_BUF_LEN=1024;ZLG_IOT_MQTT_NUM_SUBSCRIBE_HANDLERS=20;ZLG_IOT_HTTP_BUFF_SIZE=1023;ZLG_IOT_HTTP_COOKIE_SIZE=1024;ZLG_IOT_HTTP_URL_PATH_LEN=512;ZLG_IOT_HTTP_TOKEN_LEN=1024;ZLG_IOT_DEV_ID_LEN=64;ZLG_IOT_DEV_TYPE_LEN=64;ZLG_IOT_DEV_SECRET_LEN=64;ENABLE_IOT_INFO=true;ENABLE_IOT_WARN=true;ENABLE_IOT_ERROR=true;WITH_MBED_TLS=true;TRANSFER_PROTOCOL=\"https\";ZLG_IOT_AUTH_PORT=8143;ZLG_IOT_ZWS_PACKAGE_PORT=443;_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -g</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZLG_IOT_MQTT_TX_BUF_LEN=1024;ZLG_IOT_MQTT_RX_BUF_LEN=1024;ZLG_IOT_MQTT_NUM_SUBSCRIBE_HANDLERS=20;ZLG_IOT_HTTP_BUFF_SIZE=1023;ZLG_IOT_HTTP_COOKIE_SIZE=1024;ZLG_IOT_HTTP_URL_PATH_LEN=512;ZLG_IOT_HTTP_TOKEN_LEN=1024;ZLG_IOT_DEV_ID_LEN=64;ZLG_IOT_DEV_TYPE_LEN=64;ZLG_IOT_DEV_SECRET_LEN=64;ENABLE_IOT_INFO=true;ENABLE_IOT_WARN=true;ENABLE_IOT_ERROR=true;WITH_MBED_TLS=true;TRANSFER_PROTOCOL="https";ZLG_IOT_AUTH_PORT=8143;ZLG_IOT_ZWS_PACKAGE_PORT=443;_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZLG_IOT_MQTT_TX_BUF_LEN=1024;ZLG_IOT_MQTT_RX_BUF_LEN=1024;ZLG_IOT_MQTT_NUM_SUBSCRIBE_HANDLERS=20;ZLG_IOT_HTTP_BUFF_SIZE=1023;ZLG_IOT_HTTP_COOKIE_SIZE=1024;ZLG_IOT_HTTP_URL_PATH_LEN=512;ZLG_IOT_HTTP_TOKEN_LEN=1024;ZLG_IOT_DEV_ID_LEN=64;ZLG_IOT_DEV_TYPE_LEN=64;ZLG_IOT_DEV_SECRET_LEN=64;ENABLE_IOT_INFO=true;ENABLE_IOT_WARN=true;ENABLE_IOT_ERROR=true;WITH_MBED_TLS=true;TRANSFER_PROTOCOL=\"https\";ZLG_IOT_AUTH_PORT=8143;ZLG_IOT_ZWS_PACKAGE_PORT=443;_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -g</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZLG_IOT_MQTT_TX_BUF_LEN=1024;ZLG_IOT_MQTT_RX_BUF_LEN=1024;ZLG_IOT_MQTT_NUM_SUBSCRIBE_HANDLERS=20;ZLG_IOT_HTTP_BUFF_SIZE=1023;ZLG_IOT_HTTP_COOKIE_SIZE=1024;ZLG_IOT_HTTP_URL_PATH_LEN=512;ZLG_IOT_HTTP_TOKEN_LEN=1024;ZLG_IOT_DEV_ID_LEN=64;ZLG_IOT_DEV_TYPE_LEN=64;ZLG_IOT_DEV_SECRET_LEN=64;ENABLE_IOT_INFO=true;ENABLE_IOT_WARN=true;ENABLE_IOT_ERROR=true;WITH_MBED_TLS=true;TRANSFER_PROTOCOL="https";ZLG_IOT_AUTH_PORT=8143;ZLG_IOT_ZWS_PACKAGE_PORT=443;_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZLG_IOT_MQTT_TX_BUF_LEN=1024;ZLG_IOT_MQTT_RX_BUF_LEN=1024;ZLG_IOT_MQTT_NUM_SUBSCRIBE_HANDLERS=20;ZLG_IOT_HTTP_BUFF_SIZE=1023;ZLG_IOT_HTTP_COOKIE_SIZE=1024;ZLG_IOT_HTTP_URL_PATH_LEN=512;ZLG_IOT_HTTP_TOKEN_LEN=1024;ZLG_IOT_DEV_ID_LEN=64;ZLG_IOT_DEV_TYPE_LEN=64;ZLG_IOT_DEV_SECRET_LEN=64;ENABLE_IOT_INFO=true;ENABLE_IOT_WARN=true;ENABLE_IOT_ERROR=true;WITH_MBED_TLS=true;TRANSFER_PROTOCOL=\"https\";ZLG_IOT_AUTH_PORT=8143;ZLG_IOT_ZWS_PACKAGE_PORT=443;_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -g</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZLG_IOT_MQTT_TX_BUF_LEN=1024;ZLG_IOT_MQTT_RX_BUF_LEN=1024;ZLG_IOT_MQTT_NUM_SUBSCRIBE_HANDLERS=20;ZLG_IOT_HTTP_BUFF_SIZE=1023;ZLG_IOT_HTTP_COOKIE_SIZE=1024;ZLG_IOT_HTTP_URL_PATH_LEN=512;ZLG_IOT_HTTP_TOKEN_LEN=1024;ZLG_IOT_DEV_ID_LEN=64;ZLG_IOT_DEV_TYPE_LEN=64;ZLG_IOT_DEV_SECRET_LEN=64;ENABLE_IOT_INFO=true;ENABLE_IOT_WARN=true;ENABLE_IOT_ERROR=true;WITH_MBED_TLS=true;TRANSFER_PROTOCOL="https";ZLG_IOT_AUTH_PORT=8143;ZLG_IOT_ZWS_PACKAGE_PORT=443;_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZLG_IOT_MQTT_TX_BUF_LEN=1024;ZLG_IOT_MQTT_RX_BUF_LEN=1024;ZLG_IOT_MQTT_NUM_SUBSCRIBE_HANDLERS=20;ZLG_IOT_HTTP_BUFF_SIZE=1023;ZLG_IOT_HTTP_COOKIE_SIZE=1024;ZLG_IOT_HTTP_URL_PATH_LEN=512;ZLG_IOT_HTTP_TOKEN_LEN=1024;ZLG_IOT_DEV_ID_LEN=64;ZLG_IOT_DEV_TYPE_LEN=64;ZLG_IOT_DEV_SECRET_LEN=64;ENABLE_IOT_INFO=true;ENABLE_IOT_WARN=true;ENABLE_IOT_ERROR=true;WITH_MBED_TLS=true;TRANSFER_PROTOCOL=\"https\";ZLG_IOT_AUTH_PORT=8143;ZLG_IOT_ZWS_PACKAGE_PORT=443;_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>X:\zlgCloud\solar\mqttproto\zws_sdk\protocol\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket;X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\pthread;X:\zlgCloud\solar\mqttproto\zws_sdk\network\include;X:\zlgCloud\solar\mqttproto\3rd\mbedtls\include;X:\zlgCloud\solar\mqttproto\3rd\jsmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="X:\zlgCloud\solar\mqttproto\3rd\mbedtls\library\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule X:/zlgCloud/solar/mqttproto/3rd/mbedtls/library/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SX:/zlgCloud/solar/mqttproto -BX:/zlgCloud/solar/mqttproto/vs_build --check-stamp-file X:/zlgCloud/solar/mqttproto/vs_build/3rd/mbedtls/library/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">X:\zlgCloud\solar\mqttproto\vs_build\3rd\mbedtls\library\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule X:/zlgCloud/solar/mqttproto/3rd/mbedtls/library/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SX:/zlgCloud/solar/mqttproto -BX:/zlgCloud/solar/mqttproto/vs_build --check-stamp-file X:/zlgCloud/solar/mqttproto/vs_build/3rd/mbedtls/library/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">X:\zlgCloud\solar\mqttproto\vs_build\3rd\mbedtls\library\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule X:/zlgCloud/solar/mqttproto/3rd/mbedtls/library/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SX:/zlgCloud/solar/mqttproto -BX:/zlgCloud/solar/mqttproto/vs_build --check-stamp-file X:/zlgCloud/solar/mqttproto/vs_build/3rd/mbedtls/library/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">X:\zlgCloud\solar\mqttproto\vs_build\3rd\mbedtls\library\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule X:/zlgCloud/solar/mqttproto/3rd/mbedtls/library/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SX:/zlgCloud/solar/mqttproto -BX:/zlgCloud/solar/mqttproto/vs_build --check-stamp-file X:/zlgCloud/solar/mqttproto/vs_build/3rd/mbedtls/library/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">X:\zlgCloud\solar\mqttproto\vs_build\3rd\mbedtls\library\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\3rd\mbedtls\library\certs.c" />
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\3rd\mbedtls\library\pkcs11.c" />
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\3rd\mbedtls\library\x509.c" />
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\3rd\mbedtls\library\x509_create.c" />
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\3rd\mbedtls\library\x509_crl.c" />
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\3rd\mbedtls\library\x509_crt.c" />
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\3rd\mbedtls\library\x509_csr.c" />
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\3rd\mbedtls\library\x509write_crt.c" />
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\3rd\mbedtls\library\x509write_csr.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\ZERO_CHECK.vcxproj">
+      <Project>{2CE196DC-AF42-33A7-90A8-E322F0415EFA}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="X:\zlgCloud\solar\mqttproto\vs_build\3rd\mbedtls\library\mbedcrypto.vcxproj">
+      <Project>{3DE6BDB9-2302-3B57-9C58-1EADB3DA25B8}</Project>
+      <Name>mbedcrypto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

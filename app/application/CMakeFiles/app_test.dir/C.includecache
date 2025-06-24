@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ljw-zlg/work/ZioTestApp/app/application/test.c
+stdio.h
+-
+database.h
+/home/ljw-zlg/work/ZioTestApp/app/application/database.h
+
+app/database/database.h
+sqlite3.h
+app/database/sqlite3.h
+test_order.h
+app/database/test_order.h
+
+app/database/test_order.h
+stdio.h
+-
+stdint.h
+-
+
+app/lib/sqlite3/include/sqlite3.h
+stdarg.h
+-
+

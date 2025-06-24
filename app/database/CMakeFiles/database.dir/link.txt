@@ -1,0 +1,2 @@
+aarch64-linux-gnu-ar qc ../../bin/libdatabase.a  CMakeFiles/database.dir/database.c.o CMakeFiles/database.dir/test_order.c.o
+aarch64-linux-gnu-ranlib ../../bin/libdatabase.a

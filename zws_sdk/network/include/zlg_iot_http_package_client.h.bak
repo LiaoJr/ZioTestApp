@@ -1,0 +1,93 @@
+﻿/** 
+ * 功能说明：
+ *     1.HTTP 获取云端安装包。
+ *
+ * 修改历史：
+ *     1.2020-03-04 余晓蓝<yuxiaolan@zlg.cn> 创建。
+ */
+
+#ifndef ZLG_IOT_SDK_SRC_IOT_HTTP_PACKAGE_CLIENT_H
+#define ZLG_IOT_SDK_SRC_IOT_HTTP_PACKAGE_CLIENT_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
+
+#include "zlg_iot_error.h"
+#include "zlg_iot_log.h"
+#include "zlg_iot_http_client.h"
+
+#include "jsmn_wrapper.h"
+#include "network_interface.h"
+#include "timer_interface.h"
+
+#ifdef _ENABLE_THREAD_SUPPORT_
+#include "threads_interface.h"
+#endif
+
+#define PROTOCOL_SIZE 8
+#define HOSTNAME_SIZE 64
+// #define ZLG_IOT_HTTP_BUFF_SIZE 2047
+//#ifndef TRANSFER_PROTOCOL
+//#define TRANSFER_PROTOCOL              "https"
+//#endif
+
+#ifdef WITH_MBED_TLS
+  #define ZLG_IOT_ZWS_PACKAGE_PORT 443  // 使用HTTPS端口
+#else
+  #define ZLG_IOT_ZWS_PACKAGE_PORT 80  // 默认使用HTTP端口
+#endif
+
+#ifndef ZLG_IOT_HTTP_TOKEN_LEN
+#define ZLG_IOT_HTTP_TOKEN_LEN 1024
+#endif
+
+#ifndef DZLG_IOT_HTTP_URL_PATH_LEN
+#define DZLG_IOT_HTTP_URL_PATH_LEN 256
+#endif
+
+#define ZLG_IOT_ZWS_PACKAGE_HOST       "zlab.zlgcloud.com" 
+#define ZLG_IOT_ZWS_JWT                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI1MzI5MzgsImlzc3VlciI6Imh0dHBzOi8vd3d3LnpsZ2Nsb3VkLmNvbSIsImV4cCI6MTU4MzM5NjkzOH0.xZruW21jsXfcXwvdiAZzhuKZUZuNSoOb64kYg586E40"
+#define ZLG_IOT_LOGIN_CLOUD_PATH       "/v1/auth/login"
+#define ZLG_IOT_GET_LASTPACKAGE_PATH   "/v1/lastPackage?pkgtype=%s"
+#define ZLG_IOT_GET_ALLPACKAGE_PATH    "/v1/allPackages"
+#define ZLG_IOT_LOGOUT_CLOUD_PATH      "/v1/auth/logout"
+
+typedef struct _zlg_cloud_info {
+    /*input*/
+    const char* username;
+    const char* password;
+    char token[ZLG_IOT_HTTP_TOKEN_LEN];
+} zlg_cloud_info;
+
+typedef struct _zlg_package_info{
+    char pkgtype[20];
+    char version[20];
+    char url[DZLG_IOT_HTTP_URL_PATH_LEN];
+    int pkgsize;
+} zlg_package_info;
+
+typedef void (*phandle)(void* ctx);
+
+int jsoneq(const char *json, jsmntok_t *tok, const char *s);
+
+void zlg_cloud_info_init(zlg_cloud_info* info);
+void zlg_cloud_info_deinit(zlg_cloud_info* info);
+
+IoT_Error_t zlg_iot_login_cloud(zlg_cloud_info* info);
+IoT_Error_t zlg_iot_get_allpackageinfo(zlg_cloud_info* info, zlg_iot_http_client_on_body on_data, void* arg);
+IoT_Error_t zlg_iot_get_lastpackage(const char* pkgtype, zlg_cloud_info* info, zlg_iot_http_client_on_body on_data, void* arg);
+IoT_Error_t zlg_iot_download_file(const char* url, zlg_iot_http_client_on_body on_data);
+IoT_Error_t zlg_iot_logout_cloud(zlg_cloud_info* info);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

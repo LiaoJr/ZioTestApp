@@ -1,0 +1,13 @@
+x:\zlgcloud\solar\mqttproto\vs_build\cmakefiles\generate.stamp
+x:\zlgcloud\solar\mqttproto\vs_build\3rd\jsmn\cmakefiles\generate.stamp
+x:\zlgcloud\solar\mqttproto\vs_build\zws_sdk\cmakefiles\generate.stamp
+x:\zlgcloud\solar\mqttproto\vs_build\zws_sdk\network\cmakefiles\generate.stamp
+x:\zlgcloud\solar\mqttproto\vs_build\zws_sdk\protocol\common\cmakefiles\generate.stamp
+x:\zlgcloud\solar\mqttproto\vs_build\demos\cmakefiles\generate.stamp
+x:\zlgcloud\solar\mqttproto\vs_build\demos\src\cmakefiles\generate.stamp
+x:\zlgcloud\solar\mqttproto\vs_build\3rd\mbedtls\cmakefiles\generate.stamp
+x:\zlgcloud\solar\mqttproto\vs_build\3rd\mbedtls\library\cmakefiles\generate.stamp
+x:\zlgcloud\solar\mqttproto\vs_build\3rd\mbedtls\include\cmakefiles\generate.stamp
+\\192.168.178.128\samba_share\zlgcloud\solar\mqttproto\vs_build\x64\debug\zero_check\zero_check.tlog\custombuild.command.1.tlog
+\\192.168.178.128\samba_share\zlgcloud\solar\mqttproto\vs_build\x64\debug\zero_check\zero_check.tlog\custombuild.write.1.tlog
+\\192.168.178.128\samba_share\zlgcloud\solar\mqttproto\vs_build\x64\debug\zero_check\zero_check.tlog\custombuild.read.1.tlog

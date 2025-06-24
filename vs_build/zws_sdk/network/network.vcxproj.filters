@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_mqtt_client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_mqtt_client_subscribe.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_mqtt_client_common_internal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_mqtt_client_unsubscribe.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_mqtt_client_connect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_mqtt_client_yield.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_mqtt_client_publish.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_http_client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_http_auth_client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_http_package_client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_http_firmware_client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\src\zlg_iot_http_upload_file_client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\common\timer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\mbedtls\network_mbedtls_wrapper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\platform\windows\socket\network_socket_wrapper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="X:\zlgCloud\solar\mqttproto\zws_sdk\network\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CCBB74B2-0700-3836-93C3-5801ACEEEA48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

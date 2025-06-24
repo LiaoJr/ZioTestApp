@@ -1,14 +1,17 @@
 {
     "files.associations": {
         "*.ST": "st",
-        "ecat_master.h": "c",
-        "slave.h": "c",
-        "eeprom.h": "c",
-        "cmd_process.h": "c",
+        "zlg_iot_mqtt_client_interface.h": "c",
+        "client.h": "c",
+        "modbus.h": "c",
+        "zlg_iot_mqtt_client.h": "c",
+        "zlg_iot_log.h": "c",
         "stdio.h": "c",
-        "stddef.h": "c",
-        "main.h": "c",
-        "app_upgrade.h": "c"
-    },
-    "C_Cpp.default.compilerPath": "/usr/bin/gcc"
+        "sqlite3.h": "c",
+        "database.h": "c",
+        "test_order.h": "c",
+        "stdlib.h": "c",
+        "ostream": "c",
+        "random": "c"
+    }
 }
