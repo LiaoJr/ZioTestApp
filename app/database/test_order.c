@@ -5,6 +5,18 @@
 
 static upload_info_t __g_upload_info = {0};
 
+void test_order_destroy(test_order_t* test_order)
+ {
+    if (test_order) {
+        if (test_order->test_reslut) {
+            free(test_order->test_reslut);
+            test_order->test_reslut = NULL;
+        }
+        free(test_order);
+        test_order = NULL;
+    }
+ }
+
 test_order_t* test_order_create(
                         uint32_t product_id,
                         uint32_t serial_no,
@@ -35,11 +47,8 @@ test_order_t* test_order_create(
     }
     return test_order;
 __err:
-    if(test_order) {
-        free(test_order);
-        test_order = NULL;
-    }
-    return test_order;
+    test_order_destroy(test_order);
+    return NULL;
 }
 
 upload_info_t* get_upload_info_obj()

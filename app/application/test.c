@@ -6,6 +6,8 @@ int main() {
     printf("hello\r\n");
     upload_info_t* upload_info = get_upload_info_obj();
     upload_info->db = database_init("/home/test.db");
+
+    /* 插入一条测试单 */
     test_reslut_t test_reslut[] = {
         {
             .type = "Result_Eeprom_CP",
@@ -16,8 +18,8 @@ int main() {
             .num = -1
         },
         {
-            .type = "Result_Ecat_CP",
-            .num = -3
+            .type = "Result_LEDs_CP",
+            .num = -2
         },
     };
     test_order_t* test_order = NULL;
@@ -27,9 +29,11 @@ int main() {
         sizeof(test_reslut)/sizeof(test_reslut[0]),
         test_reslut);
     database_insert_order(upload_info->db, test_order);
-    database_set_config(upload_info->db, "upload_id", "2");
-    const char* upload_id = database_get_config(upload_info->db, "upload_id");
-    if (upload_id) {
-        upload_info->upload_id = atoi(upload_id);
-    }
+    test_order_destroy(test_order);
+
+    /* 获取一条数据库中未上传的测试单 */
+    database_get_test_order(upload_info->db, &test_order);
+    /* 更新上传状态 */
+    database_update_order_upload_status(upload_info->db, test_order->id, UPLOADED);
+    test_order_destroy(test_order);
 }

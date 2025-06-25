@@ -57,7 +57,7 @@ int database_insert_result(sqlite3* db, test_reslut_t* test_reslut)
         if (sqlite3_step(stmt) == SQLITE_ROW) {
             int last_id = sqlite3_column_int(stmt, 0);
             test_reslut->id = last_id;
-            printf("Last inserted ID: %d\r\n", last_id);
+            // printf("Last inserted ID: %d\r\n", last_id);
         }
     sqlite3_finalize(stmt);
     } else {
@@ -82,7 +82,7 @@ int database_insert_order(sqlite3* db, test_order_t* test_order)
     if (!db) {
         return -1;
     }
-    sprintf(buf, "INSERT INTO test_order (product_id, serial_no, uid, date) VALUES (%d, %d, %d, %d);",
+    sprintf(buf, "INSERT INTO test_order (product_id, serial_no, uid, date, upload_status) VALUES (%d, %d, %d, %d, 0);",
     test_order->product_id,
     test_order->serial_no,
     test_order->uid,
@@ -99,7 +99,7 @@ int database_insert_order(sqlite3* db, test_order_t* test_order)
         if (sqlite3_step(stmt) == SQLITE_ROW) {
             int last_id = sqlite3_column_int(stmt, 0);
             test_order->id = last_id;
-            printf("Last inserted ID: %d\r\n", last_id);
+            // printf("Last inserted ID: %d\r\n", last_id);
         }
         sqlite3_finalize(stmt);
     } else {
@@ -224,7 +224,6 @@ __end:
 const char* database_get_config(sqlite3* db, const char* key)
 {
     int rc = 0;
-    char* err_msg = NULL;
     char buf[512] = {0};   
     sqlite3_stmt* stmt; 
     static char value[128] = {0};
@@ -241,7 +240,7 @@ const char* database_get_config(sqlite3* db, const char* key)
     const char* sql = buf;
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
     if (rc != SQLITE_OK) {
-        printf("Can not find %s: %s\r\n",key , err_msg);
+        printf("Can not find %s\r\n", key);
         return NULL;
     }
 
@@ -254,6 +253,7 @@ const char* database_get_config(sqlite3* db, const char* key)
         return NULL;
         sqlite3_finalize(stmt);
     }
+
     return value;
 }
 int database_set_config(sqlite3* db, const char* key, const char* value)
@@ -278,7 +278,144 @@ int database_set_config(sqlite3* db, const char* key, const char* value)
     rc = sqlite3_exec(db, sql, NULL, NULL, &err_msg);
     if (rc != SQLITE_OK) {
         printf("Can not set config: %s\r\n", err_msg);
+
+    }
+    sqlite3_free(err_msg);
+    return rc;
+}
+
+int database_get_test_reslut(sqlite3* db, uint32_t test_order_id, test_reslut_t** test_reslut , uint32_t* test_reslut_size) 
+{
+    test_reslut_t* _test_reslut = NULL;
+    int rc = 0;
+    char buf[512] = {0};   
+    sqlite3_stmt* stmt; 
+    size_t _test_reslut_size = 0;
+
+    if (!db) {
         return -1;
     }
-    return 0;
+    const char* sql = buf;
+    sprintf(buf, "select count(*) \
+    from test_result  inner join result_desc \ 
+    where test_result.order_id = %d and test_result.num = result_desc.num and test_result.type = result_desc.type;", test_order_id);
+    rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
+    if (rc != SQLITE_OK) {
+        printf("Can not find order\r\n");
+        goto __err1;
+    }
+    if (rc = sqlite3_step(stmt) == SQLITE_ROW) {
+        _test_reslut_size = sqlite3_column_int(stmt, 0);
+    }
+    if (_test_reslut_size == 0) {
+        rc = -1;
+        goto __err1;
+    }
+    _test_reslut = malloc(sizeof(test_reslut_t) * _test_reslut_size);
+    if (!_test_reslut) {
+        rc = -1;
+        goto __err1;
+    }
+    memset(_test_reslut, 0, sizeof(test_reslut_t) * _test_reslut_size);
+
+    memset(buf, 0, sizeof(buf));
+    sprintf(buf, "select test_result.id, test_result.num, test_result.order_id, test_result.type, result_desc.desc \
+    from test_result  inner join result_desc \ 
+    where test_result.order_id = %d and test_result.num = result_desc.num and test_result.type = result_desc.type;", test_order_id);
+    rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
+    if (rc != SQLITE_OK) {
+        printf("Can not find order\r\n");
+        rc = -1;
+        goto __err1;
+    }
+    for (int i = 0; i < _test_reslut_size; i++) {
+        if (rc = sqlite3_step(stmt) == SQLITE_ROW) {
+            (_test_reslut + i)->id = sqlite3_column_int(stmt, 0);
+            (_test_reslut + i)->num = sqlite3_column_int(stmt, 1);
+            (_test_reslut + i)->order_id = sqlite3_column_int(stmt, 2);
+            const unsigned char* text = sqlite3_column_text(stmt, 3);
+            memcpy((_test_reslut + i)->type, text, strlen(text));
+            text = sqlite3_column_text(stmt, 4);
+            memcpy((_test_reslut + i)->desc, text, strlen(text));
+        } else {
+            goto __err2;
+        }
+    }
+    rc = 0;
+    *test_reslut = _test_reslut;
+    *test_reslut_size = _test_reslut_size;
+    sqlite3_finalize(stmt);
+    return rc;
+__err1:
+    sqlite3_finalize(stmt);
+    return rc;
+__err2:
+    sqlite3_finalize(stmt);
+    free(_test_reslut);
+    _test_reslut = NULL;
+    return rc;
+}
+
+int database_get_test_order(sqlite3* db, test_order_t** test_order)
+{
+    test_order_t* _test_order = NULL;
+    test_reslut_t* _test_reslut = NULL;
+    int rc = 0;
+    char buf[512] = {0};   
+    sqlite3_stmt* stmt; 
+
+    if (!db) {
+        return -1;
+    }
+
+    sprintf(buf, "select id, date, product_id, serial_no, uid, upload_status from test_order where upload_status = 0 order by date ASC;");
+    const char* sql = buf;
+    rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
+    if (rc != SQLITE_OK) {
+        printf("Can not find order\r\n");
+        return rc;
+    }
+    _test_order = malloc(sizeof(test_order_t));
+    if (!_test_order) {
+        goto __end;
+    }
+    memset(_test_order, 0, sizeof(test_order_t));
+    
+    if (rc = sqlite3_step(stmt) == SQLITE_ROW) {
+        _test_order->id = sqlite3_column_int(stmt, 0);
+        _test_order->date = sqlite3_column_int(stmt, 1);
+        _test_order->product_id = sqlite3_column_int(stmt, 2);
+        _test_order->serial_no = sqlite3_column_int(stmt, 3);
+        _test_order->uid = sqlite3_column_int64(stmt, 4);
+        _test_order->upload_status = sqlite3_column_int(stmt, 5);
+        rc = database_get_test_reslut(db, _test_order->id, &_test_reslut, &_test_order->test_reslut_size);
+        _test_order->test_reslut = _test_reslut;
+        if (rc != 0) {
+            test_order_destroy(_test_order);
+            goto  __end;
+        }
+    } else {
+        test_order_destroy(_test_order);
+        goto  __end;
+    }
+    *test_order = _test_order;
+__end:
+    sqlite3_finalize(stmt);
+    return rc;
+}
+
+int database_update_order_upload_status(sqlite3* db, uint32_t id, UPLOAD_STATU_T upload_status)
+{
+    int rc = 0;
+    char* err_msg = NULL;
+    char buf[512] = {0};   
+
+    sprintf(buf, "update test_order set upload_status = %d where id = %d;", upload_status, id);
+    const char* sql = buf;
+    rc = sqlite3_exec(db, sql, NULL, NULL, &err_msg);
+    if (rc != SQLITE_OK) {
+        printf("Can not create talbe: %s\r\n", err_msg);
+    }
+    sqlite3_free(err_msg);
+    return rc;
 }

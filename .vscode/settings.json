@@ -10,6 +10,14 @@
         "database.h": "c",
         "test_order.h": "c",
         "stdlib.h": "c",
-        "ostream": "c"
+        "ostream": "c",
+        "optional": "c",
+        "istream": "c",
+        "system_error": "c",
+        "array": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c"
     }
 }
