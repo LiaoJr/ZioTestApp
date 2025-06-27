@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include "test_order.h"
 
-static upload_info_t __g_upload_info = {0};
+
+
 
 void test_order_destroy(test_order_t* test_order)
  {
@@ -51,7 +52,3 @@ __err:
     return NULL;
 }
 
-upload_info_t* get_upload_info_obj()
-{
-    return &__g_upload_info;
-}

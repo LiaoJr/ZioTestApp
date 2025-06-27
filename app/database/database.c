@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "test_order.h"
+#include "database.h"
 #include <time.h>
 
 static int __database_create_table(sqlite3* db);

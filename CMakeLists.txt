@@ -134,7 +134,7 @@ include_directories(${PROJECT_SOURCE_DIR}/3rd/jsmn)
 
 add_subdirectory(3rd/jsmn)
 add_subdirectory(zws_sdk)
-add_subdirectory(demos)
+# add_subdirectory(demos)
 add_subdirectory(app)
 if(USE_TLS)
   add_subdirectory(3rd/mbedtls)

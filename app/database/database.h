@@ -2,6 +2,7 @@
 #define __DATABASE_H__
 #include "sqlite3.h"
 #include "test_order.h"
+#include "upload_data.h"
 
 #ifdef __cplusplus
 extern "C" {

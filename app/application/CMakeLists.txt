@@ -24,6 +24,6 @@ set(PRJ app_test)
 add_executable(${PRJ} test.c)
 target_link_directories(${PRJ} PRIVATE ${PROJECT_SOURCE_DIR}/app/lib/sqlite3/lib)
 # #链接库
-target_link_libraries(${PRJ} database sqlite3 ${SYS_LIBS})
+target_link_libraries(${PRJ} database client network utils sqlite3 ${SYS_LIBS})
 
 

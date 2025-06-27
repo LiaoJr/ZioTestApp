@@ -18,6 +18,13 @@
         "functional": "c",
         "tuple": "c",
         "type_traits": "c",
-        "utility": "c"
+        "utility": "c",
+        "upload_data.h": "c",
+        "string.h": "c",
+        "zlg_iot_http_auth_client.h": "c",
+        "commands.h": "c",
+        "zlg_iot_config.h": "c",
+        "cjson.h": "c",
+        "zlg_iot_version.h": "c"
     }
 }

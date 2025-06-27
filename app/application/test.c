@@ -6,6 +6,7 @@ int main() {
     printf("hello\r\n");
     upload_info_t* upload_info = get_upload_info_obj();
     upload_info->db = database_init("/home/test.db");
+    upload_info_init(upload_info, "202506131017", "factory_data", "202506131017");
 
     /* 插入一条测试单 */
     test_reslut_t test_reslut[] = {
@@ -30,10 +31,6 @@ int main() {
         test_reslut);
     database_insert_order(upload_info->db, test_order);
     test_order_destroy(test_order);
-
-    /* 获取一条数据库中未上传的测试单 */
-    database_get_test_order(upload_info->db, &test_order);
-    /* 更新上传状态 */
-    database_update_order_upload_status(upload_info->db, test_order->id, UPLOADED);
-    test_order_destroy(test_order);
+    uplaod_info_notify_new_data(upload_info);
+    upload_task_entry();
 }
