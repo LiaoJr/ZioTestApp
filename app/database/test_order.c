@@ -19,6 +19,7 @@ void test_order_destroy(test_order_t* test_order)
  }
 
 test_order_t* test_order_create(
+                        const char* model,
                         uint32_t product_id,
                         uint32_t serial_no,
                         uint64_t uid,
@@ -38,6 +39,7 @@ test_order_t* test_order_create(
         goto __err;
     }
     memset(test_order, 0, sizeof(test_order_t));
+    memcpy(test_order->model, model, strlen(model));
     test_order->product_id = product_id;
     test_order->serial_no = serial_no;
     test_order->uid = uid;

@@ -19,6 +19,7 @@ typedef struct test_reslut test_reslut_t;
 struct test_order
 {
     uint32_t id;
+    char model[64];
     uint32_t product_id;
     uint32_t serial_no;
     uint64_t uid;
@@ -41,6 +42,7 @@ struct test_reslut
 void test_order_destroy(test_order_t* test_order);
 
 test_order_t* test_order_create(
+                        const char* model,
                         uint32_t product_id,
                         uint32_t serial_no,
                         uint64_t uid,

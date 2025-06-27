@@ -24,7 +24,8 @@ int main() {
         },
     };
     test_order_t* test_order = NULL;
-    test_order = test_order_create(0x01020005,
+    test_order = test_order_create("ZCPC-80801-Pio",
+        0x01020005,
         0x00250522,
         2025052209344901,
         sizeof(test_reslut)/sizeof(test_reslut[0]),

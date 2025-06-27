@@ -83,11 +83,12 @@ int database_insert_order(sqlite3* db, test_order_t* test_order)
     if (!db) {
         return -1;
     }
-    sprintf(buf, "INSERT INTO test_order (product_id, serial_no, uid, date, upload_status) VALUES (%d, %d, %d, %d, 0);",
+    sprintf(buf, "INSERT INTO test_order (product_id, serial_no, uid, date, upload_status, model) VALUES (%d, %d, %d, %d, 0, '%s');",
     test_order->product_id,
     test_order->serial_no,
     test_order->uid,
-    timestamp);
+    timestamp,
+    test_order->model);
     const char* sql = buf;
     rc = sqlite3_exec(db, sql, NULL, NULL, &err_msg);
     if (rc != SQLITE_OK) {
@@ -369,7 +370,7 @@ int database_get_test_order(sqlite3* db, test_order_t** test_order)
         return -1;
     }
 
-    sprintf(buf, "select id, date, product_id, serial_no, uid, upload_status from test_order where upload_status = 0 order by date ASC;");
+    sprintf(buf, "select id, date, product_id, serial_no, uid, upload_status, model from test_order where upload_status = 0 order by date ASC;");
     const char* sql = buf;
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
     if (rc != SQLITE_OK) {
@@ -389,6 +390,8 @@ int database_get_test_order(sqlite3* db, test_order_t** test_order)
         _test_order->serial_no = sqlite3_column_int(stmt, 3);
         _test_order->uid = sqlite3_column_int64(stmt, 4);
         _test_order->upload_status = sqlite3_column_int(stmt, 5);
+        const char* text = sqlite3_column_text(stmt, 6);
+        memcpy(_test_order->model, text, strlen(text));
         rc = database_get_test_reslut(db, _test_order->id, &_test_reslut, &_test_order->test_reslut_size);
         _test_order->test_reslut = _test_reslut;
         if (rc != 0) {

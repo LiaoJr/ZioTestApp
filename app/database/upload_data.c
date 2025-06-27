@@ -350,6 +350,7 @@ static const char* test_order_pack(test_order_t* test_order)
     
     root = cJSON_CreateObject();
     cJSON_AddNumberToObject(root, "product_id", test_order->product_id);
+    cJSON_AddStringToObject(root, "model", test_order->model);
     cJSON_AddNumberToObject(root, "serial_no", test_order->serial_no);
     cJSON_AddNumberToObject(root, "uid", test_order->uid);
     cJSON_AddNumberToObject(root, "date", test_order->date);
